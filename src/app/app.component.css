@@ -1,0 +1,17 @@
+.background-color {
+  background-color: #b6000f;
+}
+
+.logo_text {
+  color: #fff;
+  text-transform: uppercase;
+  vertical-align: middle;
+  letter-spacing: 1px;
+  line-height: 13px;
+  font-size: 14px;
+}
+
+.logo_text span {
+  font-weight: 700;
+  letter-spacing: 1.6px;
+}

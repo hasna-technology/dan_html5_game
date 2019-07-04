@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+.button{
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #b6000F;
+    border-color: #b6000F;
+}
+.btn-primary:hover {
+    color: #fff;
+    background-color: rgb(155, 2, 15);
+    border-color: rgb(155, 2, 15);
+}
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle,
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    background-color: #90020e;
+    border-color: #90020e;
+}
+
+.btn-primary.focus, .btn-primary:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(182,0,15);
+}
+
+.animate{
+    opacity: 0;
+}
