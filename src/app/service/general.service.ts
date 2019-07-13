@@ -46,6 +46,7 @@ export class GeneralService {
       title: "You have selected MBP, R448A, what will be the consequence?",
       quiz:[
         {
+          id: 1,
           position: "left",
           question:"quiz1_q",
           choices:[
@@ -67,6 +68,7 @@ export class GeneralService {
           ],
           
         },{
+          id: 2,
           question:"quiz2_q",
           choices:[
             {
@@ -87,6 +89,7 @@ export class GeneralService {
           ],
           
         },{
+          id: 3,
           question:"quiz3_q",
           choices:[
             {
@@ -107,6 +110,7 @@ export class GeneralService {
           ],
           
         },{
+          id: 4,
           question:"quiz4_q",
           choices:[
             {
@@ -127,6 +131,7 @@ export class GeneralService {
           ],
           
         },{
+          id: 5,
           question:"quiz5_q",
           choices:[
             {
@@ -147,6 +152,30 @@ export class GeneralService {
           ],
           
         },{
+          id: 6,
+          position: "left",
+          question:"quiz6_q",
+          choices:[
+            {
+              text:"ch_1_1",
+              correct:false,
+              score:0
+            },
+            {
+              text:"ch_1_2",
+              correct:false,
+              score:0
+            },
+            {
+              text:"ch_1_3",
+              correct:true,
+              score:600
+            }
+          ],
+          
+        },
+        {
+          id: "3a",
           position: "left",
           question:"quiz6_q",
           choices:[
@@ -178,6 +207,7 @@ export class GeneralService {
       quiz:[
         {
           position: "left",
+          id:1,
           question:"quiz1_q",
           choices:[
             {
@@ -198,6 +228,7 @@ export class GeneralService {
           ],
           
         },{
+          id:2,
           question:"quiz2_q",
           choices:[
             {
@@ -218,6 +249,7 @@ export class GeneralService {
           ],
           
         },{
+          id:3,
           question:"quiz3_q",
           choices:[
             {
@@ -238,6 +270,7 @@ export class GeneralService {
           ],
           
         },{
+          id:4,
           question:"quiz4_q",
           choices:[
             {
@@ -258,6 +291,7 @@ export class GeneralService {
           ],
           
         },{
+          id:5,
           question:"quiz5_q",
           choices:[
             {
@@ -279,6 +313,7 @@ export class GeneralService {
           
         },{
           position: "left",
+          id:6,
           question:"quiz6_q",
           choices:[
             {
@@ -309,6 +344,7 @@ export class GeneralService {
       quiz:[
         {
           position: "left",
+          id:1,
           question:"quiz1_q",
           choices:[
             {
@@ -329,6 +365,7 @@ export class GeneralService {
           ],
           
         },{
+          id:2,
           question:"quiz2_q",
           choices:[
             {
@@ -349,6 +386,7 @@ export class GeneralService {
           ],
           
         },{
+          id:3,
           question:"quiz3_q",
           choices:[
             {
@@ -369,6 +407,7 @@ export class GeneralService {
           ],
           
         },{
+          id:4,
           question:"quiz4_q",
           choices:[
             {
@@ -389,6 +428,7 @@ export class GeneralService {
           ],
           
         },{
+          id:5,
           question:"quiz5_q",
           choices:[
             {
@@ -410,6 +450,7 @@ export class GeneralService {
           
         },{
           position: "left",
+          id:6,
           question:"quiz6_q",
           choices:[
             {
@@ -434,12 +475,13 @@ export class GeneralService {
     },
     {
       id:3,
-      name : "R 513A",
+      name : "R 452A",
       image: "assets/image/cold.png",
-      title: "You have selected MBP, R513A, what will be the consequence?",
+      title: "You have selected MBP, R452A, what will be the consequence?",
       quiz:[
         {
           position: "left",
+          id:1,
           question:"quiz1_q",
           choices:[
             {
@@ -460,11 +502,12 @@ export class GeneralService {
           ],
           
         },{
+          id:2,
           question:"quiz2_q",
           choices:[
             {
               text:"ch_1_1",
-              correct:false,
+              correct:true,
               score:0
             },
             {
@@ -480,7 +523,8 @@ export class GeneralService {
           ],
           
         },{
-          question:"quiz2_q",
+          id:3,
+          question:"quiz3_q",
           choices:[
             {
               text:"ch_1_1",
@@ -489,17 +533,18 @@ export class GeneralService {
             },
             {
               text:"ch_1_2",
-              correct:false,
+              correct:true,
               score:0
             },
             {
               text:"ch_1_3",
-              correct:true,
+              correct:false,
               score:300
             }
           ],
           
         },{
+          id:4,
           question:"quiz4_q",
           choices:[
             {
@@ -520,6 +565,7 @@ export class GeneralService {
           ],
           
         },{
+          id:5,
           question:"quiz5_q",
           choices:[
             {
@@ -541,6 +587,144 @@ export class GeneralService {
           
         },{
           position: "left",
+          id:6,
+          question:"quiz6_q",
+          choices:[
+            {
+              text:"ch_1_1",
+              correct:false,
+              score:0
+            },
+            {
+              text:"ch_1_2",
+              correct:false,
+              score:0
+            },
+            {
+              text:"ch_1_3",
+              correct:true,
+              score:600
+            }
+          ],
+          
+        }
+      ]
+    },
+    {
+      id:4,
+      name : "R 513A",
+      image: "assets/image/cold.png",
+      title: "You have selected MBP, R513A, what will be the consequence?",
+      quiz:[
+        {
+          position: "left",
+          id:1,
+          question:"quiz1_q",
+          choices:[
+            {
+              text:"ch_1_1",
+              correct:true,
+              score:100
+            },
+            {
+              text:"ch_1_2",
+              correct:false,
+              score:0
+            },
+            {
+              text:"ch_1_3",
+              correct:false,
+              score:0
+            }
+          ],
+          
+        },{
+          id:2,
+          question:"quiz2_q",
+          choices:[
+            {
+              text:"ch_1_1",
+              correct:false,
+              score:0
+            },
+            {
+              text:"ch_1_2",
+              correct:false,
+              score:0
+            },
+            {
+              text:"ch_1_3",
+              correct:true,
+              score:200
+            }
+          ],
+          
+        },{
+          id:3,
+          question:"quiz2_q",
+          choices:[
+            {
+              text:"ch_1_1",
+              correct:false,
+              score:0
+            },
+            {
+              text:"ch_1_2",
+              correct:false,
+              score:0
+            },
+            {
+              text:"ch_1_3",
+              correct:true,
+              score:300
+            }
+          ],
+          
+        },{
+          id:4,
+          question:"quiz4_q",
+          choices:[
+            {
+              text:"ch_1_1",
+              correct:false,
+              score:400
+            },
+            {
+              text:"ch_1_2",
+              correct:false,
+              score:0
+            },
+            {
+              text:"ch_1_3",
+              correct:true,
+              score:0
+            }
+          ],
+          
+        },{
+          id:5,
+          question:"quiz5_q",
+          choices:[
+            {
+              text:"ch_1_1",
+              correct:false,
+              score:0
+            },
+            {
+              text:"ch_1_2",
+              correct:true,
+              score:0
+            },
+            {
+              text:"ch_1_3",
+              correct:false,
+              score:500
+            }
+          ],
+          
+        },{
+          position: "left",
+          id:6,
           question:"quiz6_q",
           choices:[
             {
@@ -574,6 +758,7 @@ export class GeneralService {
       title: "You have selected MBP, R449A, what will be the consequence?",
       quiz:[
         {
+          id:1,
           question:"quiz1_q",
           choices:[
             {
@@ -594,6 +779,7 @@ export class GeneralService {
           ],
           
         },{
+          id:2,
           question:"quiz2_q",
           choices:[
             {
@@ -614,6 +800,7 @@ export class GeneralService {
           ],
           
         },{
+          id:3,
           question:"quiz3_q",
           choices:[
             {
@@ -634,6 +821,7 @@ export class GeneralService {
           ],
           
         },{
+          id:4,
           question:"quiz4_q",
           choices:[
             {
@@ -654,6 +842,7 @@ export class GeneralService {
           ],
           
         },{
+          id:5,
           question:"quiz5_q",
           choices:[
             {
@@ -675,6 +864,7 @@ export class GeneralService {
           
         },{
           position: "left",
+          id:6,
           question:"quiz6_q",
           choices:[
             {
@@ -704,6 +894,7 @@ export class GeneralService {
       title: "You have selected MBP, R452A, what will be the consequence?",
       quiz:[
         {
+          id:1,
           question:"quiz1_q",
           choices:[
             {
@@ -724,6 +915,7 @@ export class GeneralService {
           ],
           
         },{
+          id:2,
           question:"quiz2_q",
           choices:[
             {
@@ -744,6 +936,7 @@ export class GeneralService {
           ],
           
         },{
+          id:3,
           question:"quiz3_q",
           choices:[
             {
@@ -764,6 +957,7 @@ export class GeneralService {
           ],
           
         },{
+          id:4,
           question:"quiz4_q",
           choices:[
             {
@@ -785,6 +979,7 @@ export class GeneralService {
           
         },
         {
+          id:5,
           question:"quiz5_q",
           choices:[
             {
@@ -806,6 +1001,7 @@ export class GeneralService {
           
         },{
           position: "left",
+          id:6,
           question:"quiz6_q",
           choices:[
             {

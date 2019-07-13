@@ -1,71 +1,84 @@
 .number_group {
-    position: relative;
-  }
-  
-  .number {
-    background-color: #b6000f;
-    color: #ffffff;
-    border: 0px solid #0000FF;
-    border-radius: 30px;
-    padding: 5px 12px;
-    position: absolute;
-    cursor: pointer;
-    transition: width 5.2s, height 8.2s, border 3.1s, margin 3.2s;
-  }
-  button:focus {
-    outline: none;
+  position: relative;
 }
-  
-  .blink:after {
-    content: "";
-    position: absolute;
-    top: -16px;
-    left: -16px;
-    right: -16px;
-    bottom: -16px;
-    border: 8px solid hsla(0, 90%, 42%, 0.5);
-    border-radius: 50%;
-    pointer-events: none;
-    animation: markerPulse 1s ease-in-out infinite alternate;
-    
+
+.number {
+  background-color: #b6000f;
+  color: #ffffff;
+  border: 0px solid #0000FF;
+  border-radius: 30px;
+  padding: 5px 12px;
+  position: absolute;
+  cursor: pointer;
+  transition: width 5.2s, height 8.2s, border 3.1s, margin 3.2s;
+}
+
+button:focus {
+  outline: none;
+}
+
+.blink:after {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  right: -16px;
+  bottom: -16px;
+  border: 8px solid hsla(0, 90%, 42%, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: markerPulse 1s ease-in-out infinite alternate;
+
+}
+
+@keyframes markerPulse {
+  0% {
+    transform: scale(.5)
   }
-  
-  @keyframes markerPulse {
-    0% {
-      transform: scale(.5)
-    }
-  
-    to {
-      transform: scale(1)
-    }
+
+  to {
+    transform: scale(1)
   }
-  .number:nth-child(0) {
-    left: 41%;
-    top: 91%;
-  }
-  .number:nth-child(1) {
-    left: 41%;
-    top: 91%;
-  }
-  .number:nth-child(2) {
-    left: 2%;
-    top: 70%;
-  }
-  .number:nth-child(3) {
-    left: 15%;
-    top: 0%;
-  }
-  .number:nth-child(4) {
-    left: 27%;
-    top: 31%;
-  }
-  .number:nth-child(5) {
-    left: 63%;
-    top: 21%;
-  }
-  .number:nth-child(6) {
-    left: 82%;
-    top: 21%;
+}
+
+.number:nth-child(0) {
+  left: 41%;
+  top: 77%;
+}
+
+.number:nth-child(1) {
+  left: 41%;
+  top: 77%;
+}
+
+.number:nth-child(2) {
+  left: 2%;
+  top: 27%;
+}
+
+.number:nth-child(3) {
+  left: 15%;
+  top: 9%;
+}
+
+.number:nth-child(4) {
+  left: 27%;
+  top: 31%;
+}
+
+.number:nth-child(5) {
+  left: 61%;
+  top: 40%;
+}
+
+.number:nth-child(6) {
+  left: 84%;
+  top: 30%;
+}
+
+.number:nth-child(7) {
+  left: 45%;
+  top: 32%;
 }
 
 /*  .mbp#assessment_0 .number:nth-child(0) {
@@ -262,70 +275,77 @@
     top: 21%;
   }
     */
-  .popup {
-    width: 29%;
-    padding: 20px;
-    position: absolute;
-    border-radius: 10px;
-    box-shadow: 3px 3px 8px 3px #0000003d;
-    background-color: white;
-    z-index: 100;
-  }
+.popup {
+  width: 29%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 3px 3px 8px 3px #0000003d;
+  background-color: white;
+  z-index: 100;
+}
 
-  .full-width{
-      width: 100%;
-  }
-  .close_button_border{
+.full-width {
+  width: 100%;
+}
+
+.close_button_border {
   background-color: #b6000f;
-  border: 0px ;
+  border: 0px;
   border-radius: 30px;
   padding: 4px 8px;
   padding-bottom: 8px;
   padding-top: 0px;
   position: relative;
-  }
-  .next-button{
-    color: #fff;
-    background-color: rgb(182, 0, 15);
-    border-color: #b6000f;
-  }
-  .next-button:hover {
-    color: #fff;
-    background-color: rgb(200, 35, 51);
-    border-color: #bd2130;
 }
-.btn.focus, .btn:focus {
+
+.next-button {
+  color: #fff;
+  background-color: rgb(182, 0, 15);
+  border-color: #b6000f;
+}
+
+.next-button:hover {
+  color: #fff;
+  background-color: rgb(200, 35, 51);
+  border-color: #bd2130;
+}
+
+.btn.focus,
+.btn:focus {
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgb(200, 35, 51);
 }
-.score-border{
-    border: 5px solid #b6000f;
-    width: 15%;
-    background: #b6000f;
-    color: #fff;
-    font-size: 25px;
-    font-weight: 700;
-    border-radius: 11px;
-    text-align: center;
-    opacity: 0.8;
+
+.score-border {
+  border: 5px solid #b6000f;
+  width: 15%;
+  background: #b6000f;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 700;
+  border-radius: 11px;
+  text-align: center;
+  opacity: 0.8;
 }
 
-.enable{
+.enable {
   opacity: 1;
   cursor: pointer;
 }
 
-.close{
-    font-size: 1rem;
-    font-weight: normal;
-    line-height: 1; 
-    color: #bbbbbb;
+.close {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1;
+  color: #bbbbbb;
 }
 
-.btn.disabled, .btn:disabled {
+.btn.disabled,
+.btn:disabled {
   opacity: .25;
 }
 
-.footer{
+.footer {
   margin-top: 10px;
 }

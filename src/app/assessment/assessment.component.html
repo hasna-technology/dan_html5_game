@@ -7,7 +7,7 @@
       <button type="button" class="number"  
         *ngFor="let q of ref_arr.quiz; let i = index" [ngClass]="{ 'blink': !q.completed}"
         [ngStyle]="{'border-color': ref_arr.quiz[i].userchoice == undefined ? '#FF0000' : '#00FF00'}"
-        (click)="onclick(q, $event)" title="open" data-toggle="popover" data-placement="right">{{i + 1}}
+        (click)="onclick(q, $event)" title="open" data-toggle="popover" data-placement="right">{{q.id}}
       </button>
     </div>
 
