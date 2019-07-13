@@ -61,4 +61,7 @@ export class AppComponent implements OnInit {
     return this.route.url.indexOf('/assessment') != -1;
   }
 
+  setContent(lang){
+    this.service.getJson(lang);
+  }
 }

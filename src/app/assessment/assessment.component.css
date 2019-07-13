@@ -39,8 +39,36 @@
       transform: scale(1)
     }
   }
-  
-  .mbp#assessment_0 .number:nth-child(0) {
+  .number:nth-child(0) {
+    left: 41%;
+    top: 91%;
+  }
+  .number:nth-child(1) {
+    left: 41%;
+    top: 91%;
+  }
+  .number:nth-child(2) {
+    left: 2%;
+    top: 70%;
+  }
+  .number:nth-child(3) {
+    left: 15%;
+    top: 0%;
+  }
+  .number:nth-child(4) {
+    left: 27%;
+    top: 31%;
+  }
+  .number:nth-child(5) {
+    left: 63%;
+    top: 21%;
+  }
+  .number:nth-child(6) {
+    left: 82%;
+    top: 21%;
+}
+
+/*  .mbp#assessment_0 .number:nth-child(0) {
     left: 41%;
     top: 91%;
   }
@@ -107,6 +135,74 @@
     left: 63%;
     top: 21%;
   }
+  .mbp#assessment_2 .number:nth-child(0) {
+    left: 41%;
+    top: 91%;
+  }
+  
+  .mbp#assessment_2 .number:nth-child(1) {
+    left: 2%;
+    top: 70%;
+  }
+  
+  .mbp#assessment_2 .number:nth-child(2) {
+    left: 41%;
+    top: 91%;
+  }
+  
+  .mbp#assessment_2 .number:nth-child(3) {
+    left: 27%;
+    top: 31%;
+  }
+  
+  .mbp#assessment_2 .number:nth-child(4) {
+    left: 15%;
+    top: 0%;
+  }
+  
+  .mbp#assessment_2 .number:nth-child(5) {
+    left: 90%;
+    top: 21%;
+  }
+  
+  .mbp#assessment_2 .number:nth-child(6) {
+    left: 63%;
+    top: 21%;
+  }
+  .mbp#assessment_3 .number:nth-child(0) {
+    left: 41%;
+    top: 91%;
+  }
+  
+  .mbp#assessment_3 .number:nth-child(1) {
+    left: 2%;
+    top: 70%;
+  }
+  
+  .mbp#assessment_3 .number:nth-child(2) {
+    left: 41%;
+    top: 91%;
+  }
+  
+  .mbp#assessment_3 .number:nth-child(3) {
+    left: 27%;
+    top: 31%;
+  }
+  
+  .mbp#assessment_3 .number:nth-child(4) {
+    left: 15%;
+    top: 0%;
+  }
+  
+  .mbp#assessment_3 .number:nth-child(5) {
+    left: 90%;
+    top: 21%;
+  }
+  
+  .mbp#assessment_3 .number:nth-child(6) {
+    left: 63%;
+    top: 21%;
+  }  
   .lbp#assessment_0 .number:nth-child(1) {
     left: 2%;
     top: 70%;
@@ -136,7 +232,36 @@
     left: 63%;
     top: 21%;
   }
+  .lbp#assessment_1 .number:nth-child(1) {
+    left: 2%;
+    top: 70%;
+  }
   
+  .lbp#assessment_1 .number:nth-child(2) {
+    left: 41%;
+    top: 91%;
+  }
+  
+  .lbp#assessment_1 .number:nth-child(3) {
+    left: 27%;
+    top: 31%;
+  }
+  
+  .lbp#assessment_1 .number:nth-child(4) {
+    left: 15%;
+    top: 0%;
+  }
+  
+  .lbp#assessment_1 .number:nth-child(5) {
+    left: 90%;
+    top: 21%;
+  }
+  
+  .lbp#assessment_1 .number:nth-child(6) {
+    left: 63%;
+    top: 21%;
+  }
+    */
   .popup {
     width: 29%;
     padding: 20px;

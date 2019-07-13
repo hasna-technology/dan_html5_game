@@ -91,5 +91,10 @@ export class AssessmentComponent implements OnInit {
 
     this.router.navigateByUrl('/assessment/'+this.ref_name + "/" + new_id);
   }
-
+  getContent(id){
+    //console.log(id);
+    return this.service._content[id];
+  }
+  
+  
 }

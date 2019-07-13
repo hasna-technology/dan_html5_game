@@ -13,15 +13,15 @@
 
     <div id="popup" [style.top.px]="top" [style.left.px]="left" class="popup" *ngIf="showPopup">
       <div class="close button" (click)="showPopup = false"><i class="fa fa-times" aria-hidden="true"></i></div>
-      <div class="question" *ngIf="selected_quiz">
-        {{selected_quiz.question}}
+      <div class="question" *ngIf="selected_quiz" [innerHTML]="getContent(selected_quiz.question)">
+        
       </div>
-      <div class="answer" *ngIf="selected_quiz">
+      <div class="answer" *ngIf="selected_quiz" >
         <div *ngFor="let choice of selected_quiz.choices; let i = index">
           <input type="radio" name="choice" 
           [checked]="selected_quiz.userchoice === i" 
           (change)="selected_quiz.userchoice = i" id="{{i}}">
-          {{choice.text}}
+          <span [innerHTML]="getContent(choice.text)"></span>
         </div>
       </div>
       <div class="footer">
