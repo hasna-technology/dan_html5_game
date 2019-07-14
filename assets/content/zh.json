@@ -1,0 +1,21 @@
+{
+    "welcome" : "Zh Welcome to CoolGame III",
+    "txt1" : "<p>Zh You need a new refrigerant in the R404A system, but what are the consequences?</p><p>Test your knowledge and skills and get a chance to win a cool prize!</p>",
+    "txt2" : "Zh Remember the system was built for R404A, so are the compressor, the TXV, the condenser OK, and what about the performance?",
+    "txt3" : "Zh Get Start",
+    "txt4" : "Zh 1. Select your system",
+    "txt5" : "Zh 2. Select your new refrigerant",
+    "txt6" : "Zh 3. Estimate the consequences",
+    "txt7" : "Zh <p>We know that a different refrigerant will behave differently, but to obtain same function and temperatures, what will you need to change in the setup and components?</p>",
+    "quiz1_q" : "Zh 1) Is the LIQUID line:",
+   
+    "quiz2_q" :"Zh 2) Is the Solenoid valve:",
+    "quiz3_q" :"Zh 3) Is the expansion valve:",
+    "quiz4_q" : "Zh 4) Is the evaporator:",
+    "quiz5_q" :"Zh 5) Is the compressor:",
+    "quiz6_q" : "Zh 6) Is the condenser:",
+    "ch_1_1"  : "Zh Too big",
+    "ch_1_2"  : "Zh Too small",
+    "ch_1_3"  : "Zh ok"
+
+}
