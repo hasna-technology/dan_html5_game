@@ -25,13 +25,14 @@ const routes: Routes = [
     component: AssessmentComponent  
   },
   {
-    path: "form",
+    path: "signup",
     component: SignupComponent  
   },
   {
     path:"information",
     component:InformationComponent
-  }
+  },
+  
   
 ];
 

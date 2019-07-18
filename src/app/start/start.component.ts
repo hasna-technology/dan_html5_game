@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { GeneralService } from '../service/general.service';
 import anime from 'animejs';
+import { $ } from 'protractor';
 
 @Component({
   selector: 'app-start',
@@ -25,7 +26,7 @@ export class StartComponent implements OnInit {
       this.router.navigateByUrl('/assessment/'+ref + "/" + id);
   }
 
-  step2_click(id){
+  step2_click(id){    
     this.step2_id = id;
     this.show('.step3')
   }
@@ -51,4 +52,5 @@ export class StartComponent implements OnInit {
   hide(selector){
     (document.querySelector(selector) as HTMLElement).style.opacity = '0';
   }
+  
 }

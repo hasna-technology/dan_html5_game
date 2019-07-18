@@ -1,11 +1,11 @@
 <div class="container {{ref_name}}" id="assessment_{{id}}">
   <h4 class="p-5">{{ref_arr.title}}</h4>
-  
+
   <div class="number_group">
     <img class="full-width" src="{{ref_arr.image}}">
     <div>
-      <button type="button" class="number"  
-        *ngFor="let q of ref_arr.quiz; let i = index" [ngClass]="{ 'blink': !q.completed}"
+      <button type="button" class="number" *ngFor="let q of ref_arr.quiz; let i = index"
+        [ngClass]="{ 'blink': !q.completed}"
         [ngStyle]="{'border-color': ref_arr.quiz[i].userchoice == undefined ? '#FF0000' : '#00FF00'}"
         (click)="onclick(q, $event)" title="open" data-toggle="popover" data-placement="right">{{q.id}}
       </button>
@@ -14,21 +14,27 @@
     <div id="popup" [style.top.px]="top" [style.left.px]="left" class="popup" *ngIf="showPopup">
       <div class="close button" (click)="showPopup = false"><i class="fa fa-times" aria-hidden="true"></i></div>
       <div class="question" *ngIf="selected_quiz" [innerHTML]="getContent(selected_quiz.question)">
-        
+
       </div>
-      <div class="answer" *ngIf="selected_quiz" >
+      <div class="answer" *ngIf="selected_quiz">
         <div *ngFor="let choice of selected_quiz.choices; let i = index">
-          <input type="radio" name="choice" 
-          [checked]="selected_quiz.userchoice === i" 
-          (change)="selected_quiz.userchoice = i" id="{{i}}">
+          <input type="radio" name="choice" [checked]="selected_quiz.userchoice === i"
+            (change)="selected_quiz.userchoice = i" id="{{i}}">
           <span [innerHTML]="getContent(choice.text)"></span>
         </div>
       </div>
       <div class="footer">
         <input type="button" class="btn next-button" value="Submit" (click)="onSubmit(selected_quiz)">
       </div>
+
     </div>
-    <input type="button" class="btn next-button float-right" [disabled]="!nextEnable" value="Next" (click) = "onNext()">
+  </div>
+  <input type="button" class="btn next-button float-right" value="Next" (click)="onNext()">
+
+  <div class="thanks">
+    <input type="button" class="btn next-button float-right" value="No thanks. 
+      (wall of fame slide 8)
+     " (click)="noThanks()">
   </div>
   <!-- <input type="button" class="btn next-button " routerLink="/form" value="Form"> -->
 </div>
