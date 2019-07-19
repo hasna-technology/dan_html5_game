@@ -8,6 +8,8 @@ import { InformationModuleModule } from '../information-module/information-modul
   providedIn: 'root'
 })
 export class GeneralService {
+  
+ 
 
   _content = {};
 
@@ -1044,6 +1046,55 @@ export class GeneralService {
   get_length(r){
     return r.length;
   }
+  getAssessmentNextState(name) {
+    if(name == "mbp")
+    {
+      for(var i=0;i<this.mbp_ref.length;i++)
+      {
+        if(this.mbp_ref[i]['completed'] != true){
+          return "mbp"
+        }
+      }
+    }
+    else
+    {
+      for(var i=0;i<this.lbp_ref.length;i++)
+      {
+        if(this.lbp_ref[i]['completed'] != true){
+          return "lbp"
+        }
+      }
+    }
 
+    for(var i=0;i<this.mbp_ref.length;i++)
+    {
+      if(this.mbp_ref[i]['completed'] != true){
+        return "mbp"
+      }
+    }
+    for(var i=0;i<this.lbp_ref.length;i++)
+    {
+      if(this.lbp_ref[i]['completed'] != true){
+        return "lbp"
+      }
+    }
+    return "score";
+  }
+  setRandomScore(arr: any) {
+    var result = 0;
+    for(var i=0;i<arr.length;i++)
+    {
+      arr[i]['score'] = (Math.floor(Math.random() * 5) + 2) * 100;
+    }
+    return result;
+  }
+  componentScore(arr: any) {
+    var result = 0;
+    for(var i=0;i<arr.length;i++)
+    {
+      result += arr[i]['score'];
+    }
+    return result;
+  }
 
 }

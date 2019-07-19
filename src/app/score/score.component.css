@@ -1,0 +1,9 @@
+.c-table td,
+.c-table th {
+  padding: 5px 10px;
+  border:1px solid #eee;
+}
+
+.c-table th {
+    font-weight: bold;
+}

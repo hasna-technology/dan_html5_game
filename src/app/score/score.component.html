@@ -1,0 +1,53 @@
+<div class="container mt-5">
+  <h2>Your Score:</h2>
+  <br>
+  <div class="row">
+    <div class="col-sm-6">
+      <h4>ColdRoom score:</h4>
+      <table class="c-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of mbp_ref">
+            <td>{{item.name}}</td>
+            <td class="text-right">{{item.score}}</td>
+          </tr>
+          <tr>
+            <td><b>Total</b></td>
+            <td class="text-right">{{mbp_score}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-sm-6">
+      <h4>Freezer score:</h4>
+      <table class="c-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of lbp_ref">
+            <td>{{item.name}}</td>
+            <td class="text-right">{{item.score}}</td>
+          </tr>
+          <tr>
+            <td><b>Total</b></td>
+            <td class="text-right">{{lbp_score}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <br>
+  <h5>Total in all	{{getScore()}} out of 7200</h5>
+  <p>Great job! Would you like to continue? </p>
+  <a href="/" class="btn btn-primary button" >Play again</a> &nbsp;
+  <a routerLink="/halloffame"  class="btn btn-primary button" >Send my result to Wall of Fame</a>
+</div>

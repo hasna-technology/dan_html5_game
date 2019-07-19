@@ -2,11 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { GeneralService } from '../service/general.service';
+import { moveIn, fallIn } from '../router.animations';
+import anime from 'animejs';
 
 @Component({
   selector: 'app-assessment',
   templateUrl: './assessment.component.html',
-  styleUrls: ['./assessment.component.css']
+  styleUrls: ['./assessment.component.css'],
+  animations: [moveIn(), fallIn()],
+  host: {'[@moveIn]': ''}
 })
 export class AssessmentComponent implements OnInit {
   
@@ -50,7 +54,7 @@ export class AssessmentComponent implements OnInit {
     }
     this.showPopup = true;
   }
-  nextEnable = false;
+  nextEnable = true;
   onSubmit(q){
     console.log(this.selected_quiz.userchoice, this.ref_arr)
     var cnt = 0;
@@ -66,16 +70,21 @@ export class AssessmentComponent implements OnInit {
     }
     this.service.setSetScore(this.ref_arr.score);
     this.selected_quiz.completed = true;
+    //console.log(this.selected_quiz);
+    this.ref_arr.completed = true;
+    //console.log(this.ref_arr );
     console.log(this.ref_arr.quiz.length + " == " +  cnt);
     if(this.ref_arr.quiz.length ==  cnt){
       this.nextEnable = true;
+      this.ref_arr.completed = true;
     }
     this.showPopup = false;
   }
 
   onNext(){
-
+   
     let new_id = (Number(this.id) + 1);
+    /*
     if(this.ref_name == "mbp"){
       if(new_id > this.service.get_length(this.service.get_mbp())-1){
         this.router.navigateByUrl('/home');
@@ -87,9 +96,27 @@ export class AssessmentComponent implements OnInit {
         return;
       }
     }
+    anime({
+      targets: '.assess',
+      translateX: [200, 0],
+      opacity: [0, 1],
+      delay: function(el, i, l) {
+        return i * 500;
+      },
+      easing: 'linear',
+      duration: 500
+  });
 
-
-    this.router.navigateByUrl('/assessment/'+this.ref_name + "/" + new_id);
+    this.router.navigateByUrl('/assessment/'+this.ref_name + "/" + new_id);*/
+    let next_state = this.service.getAssessmentNextState(this.ref_name);
+    console.log("next_state = "+next_state);
+    if(next_state == "score")
+    {
+      this.router.navigateByUrl('/score');
+    }else
+    {
+      this.router.navigateByUrl('/start/'+next_state + "/" + new_id);
+    }
   }
   getContent(id){
     //console.log(id);

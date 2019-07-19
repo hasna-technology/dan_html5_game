@@ -6,6 +6,8 @@ import { SignupComponent } from './signup/signup.component';
 
 import { InformationComponent } from './information/information.component';
 import { StartComponent } from './start/start.component';
+import { ScoreComponent } from './score/score.component';
+import { HallComponent } from './hall/hall.component';
 
 const routes: Routes = [
   {
@@ -21,8 +23,19 @@ const routes: Routes = [
     component: StartComponent  
   },
   {
+    path: "start/:ref/:id",
+    component: StartComponent  
+  },
+  {
     path: "assessment/:ref/:id",
     component: AssessmentComponent  
+  },
+  {
+    path: "score",
+    component: ScoreComponent
+  },{
+    path: "halloffame",
+    component: HallComponent
   },
   {
     path: "form",

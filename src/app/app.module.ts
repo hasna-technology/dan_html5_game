@@ -11,6 +11,8 @@ import { SignupComponent } from './signup/signup.component';
 import { HttpClientModule } from '@angular/common/http';
 import { InformationComponent } from './information/information.component';
 import { StartComponent } from './start/start.component';
+import { ScoreComponent } from './score/score.component';
+import { HallComponent } from './hall/hall.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { StartComponent } from './start/start.component';
     SignupComponent,
     InformationComponent,
     StartComponent,
+    ScoreComponent,
+    HallComponent,
   ],
   imports: [
     BrowserModule,

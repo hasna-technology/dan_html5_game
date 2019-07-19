@@ -1,12 +1,12 @@
 <div class="container">
-  <h2 class="mt-5 animate" [innerHTML]="service._content.welcome"></h2>
+  <h2 class="mt-5 animate" [innerHTML]="service._content['welcome']"></h2>
   <div class="animate">
-    <p class="mt-3 mb-0" [innerHTML]="service._content.txt1"></p>
+    <p class="mt-3 mb-0" [innerHTML]="service._content['txt1']"></p>
     
   </div>
   <div class="text-center animate">
     <img src="assets/image/circuit.jpg" alt="">
   </div>
   <!-- <p class="animate" [innerHTML]="service._content.txt2"></p> -->
-  <a routerLink="/start" class="btn btn-primary animate" [innerHTML]="service._content.txt3" ></a>
+  <a routerLink="/start" class="btn btn-primary animate" [innerHTML]="service._content['txt3']" ></a>
 </div>

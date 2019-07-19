@@ -1,19 +1,41 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { GeneralService } from '../service/general.service';
 import anime from 'animejs';
+import { moveIn, fallIn } from '../router.animations';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-start',
   templateUrl: './start.component.html',
-  styleUrls: ['./start.component.css']
+  styleUrls: ['./start.component.css'],
+  animations: [moveIn(), fallIn()],
+  host: {'[@moveIn]': ''}
 })
 export class StartComponent implements OnInit {
 
-
-  constructor(private router: Router, private service:GeneralService) { }
-
+  //state: string = '';
+  constructor(private router: Router,private route: ActivatedRoute, public service:GeneralService) { }
+  private routeSub: Subscription;
+  ref_name;
+  id;
   ngOnInit() {
+    this.routeSub = this.route.params.subscribe(params => {
+      console.log(params) //log the entire params object
+      
+      this.ref_name = params['ref'];
+      this.id = params['id'];
+
+      console.log(this.ref_name) //log the value of id
+      if(this.ref_name == "mbp")
+      {
+        this.step_1_click('mbp')
+      }else if(this.ref_name == "lbp")
+      {
+        this.step_1_click('lbp')
+      }
+
+    });
   }
 
   mbp_ref = this.service.get_mbp();

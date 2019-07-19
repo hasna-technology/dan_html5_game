@@ -1,7 +1,7 @@
 <div class="container mt-5">
 
   <div class="step1">
-    <h3 [innerHTML]="service._content.txt4"></h3>
+    <h3 [innerHTML]="service._content['txt4']"></h3>
     <div class="mt-3">
       <button type="button" class="btn btn-secondary mr-1" [ngClass]="{'btn-primary' : step1_id == 'mbp'}"
         (click)="step_1_click('mbp')">
@@ -16,18 +16,18 @@
   </div>
 
   <div class="step2 mt-4 animate">
-    <h3 [innerHTML]="service._content.txt5"></h3>
+    <h3 [innerHTML]="service._content['txt5']"></h3>
     <div class="mt-3">
       <div *ngIf="step1_id == 'mbp'">
         <div class="button btn btn-secondary mr-1" *ngFor="let item of mbp_ref" 
-          [ngClass]="{'btn-primary' : step2_id == item.id}"
+          [ngClass]="{'btn-primary' : step2_id == item.id, 'btn-success' : item.completed == true}"
         (click)="step2_click(item.id)">
           <i class="fa fa-server" aria-hidden="true"></i> {{item.name}}
         </div>
       </div>
       <div *ngIf="step1_id == 'lbp'">
         <div class="button btn btn-secondary mr-1" *ngFor="let item of lbp_ref"
-          [ngClass]="{'btn-primary' : step2_id == item.id}"
+          [ngClass]="{'btn-primary' : step2_id == item.id, 'btn-success' : item.completed == true}"
           (click)="step2_click(item.id)">
           <i class="fa fa-building" aria-hidden="true"></i> {{item.name}}
         </div>
@@ -36,11 +36,11 @@
   </div>
 
   <div class="step3 mt-4 animate">
-    <h3 [innerHTML]="service._content.txt6"></h3>
+    <h3 [innerHTML]="service._content['txt6']"></h3>
     <div class="mt-3">
-      <p [innerHTML]="service._content.txt7"></p>
+      <p [innerHTML]="service._content['txt7']"></p>
     </div>
-    <div (click)="ref_click(step1_id, step2_id)" class="btn btn-primary button" [innerHTML]="service._content.txt3"></div>
+    <div (click)="ref_click(step1_id, step2_id)" class="btn btn-primary button" [innerHTML]="service._content['txt3']"></div>
   </div>
 
   <!--<h3 class="header">You need to replace R 404A in an existing refrigeration system Select your system:</h3>
