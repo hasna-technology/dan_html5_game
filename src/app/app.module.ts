@@ -12,7 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { InformationComponent } from './information/information.component';
 import { StartComponent } from './start/start.component';
 import { ScoreComponent } from './score/score.component';
-import { HallComponent } from './hall/hall.component';
+import { WallComponent } from './wall/wall.component';
+import { ExitComponent } from './exit/exit.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HallComponent } from './hall/hall.component';
     InformationComponent,
     StartComponent,
     ScoreComponent,
-    HallComponent,
+    WallComponent,
+    ExitComponent,
   ],
   imports: [
     BrowserModule,

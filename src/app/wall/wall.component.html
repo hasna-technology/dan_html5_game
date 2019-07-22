@@ -1,0 +1,24 @@
+<div class="container mt-5">
+    <h2>Wall of fame:</h2>
+    <table class="c-table">
+        <thead>
+          <tr>
+            <th>Nickname</th>
+            <th>Country/region</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of wall">
+            <td>{{item.name}}</td>
+            <td>{{item.country}}</td>
+            <td class="text-right">{{item.score}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <h3>You can win a great prize!</h3>
+      <p>Sign up below and participate in the competition to win a free hike from your home to Danfoss Nordborg, camping in shelters and tools for preparing your own food!!!</p>
+      <a routerLink="/form" class="btn btn-primary button" >I wanted to win</a> &nbsp;
+      <a routerLink="/exit"  class="btn btn-secondary button" >No, I want to exit </a>
+</div>

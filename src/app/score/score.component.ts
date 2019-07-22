@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { GeneralService } from '../service/general.service';
+import { moveIn, fallIn } from '../router.animations';
 
 @Component({
   selector: 'app-score',
   templateUrl: './score.component.html',
-  styleUrls: ['./score.component.css']
+  styleUrls: ['./score.component.css'],
+  animations: [moveIn(), fallIn()],
+  host: {'[@moveIn]': ''}
 })
 export class ScoreComponent implements OnInit {
 

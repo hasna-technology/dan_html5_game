@@ -28,7 +28,10 @@
         <input type="button" class="btn next-button" value="Submit" (click)="onSubmit(selected_quiz)">
       </div>
     </div>
-    <input type="button" class="btn next-button float-right" [disabled]="!nextEnable" value="Next" (click) = "onNext()">
+    <div class='float-right'>
+      <a routerLink="/score" class="btn next-button">Score</a> &nbsp;
+      <input type="button" class="btn next-button" [disabled]="!nextEnable" value="Next" (click) = "onNext()">
+    </div>
   </div>
   <!-- <input type="button" class="btn next-button " routerLink="/form" value="Form"> -->
 </div>

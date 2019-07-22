@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HallComponent } from './hall.component';
+import { ExitComponent } from './exit.component';
 
-describe('HallComponent', () => {
-  let component: HallComponent;
-  let fixture: ComponentFixture<HallComponent>;
+describe('ExitComponent', () => {
+  let component: ExitComponent;
+  let fixture: ComponentFixture<ExitComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HallComponent ]
+      declarations: [ ExitComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HallComponent);
+    fixture = TestBed.createComponent(ExitComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -54,7 +54,7 @@ export class AssessmentComponent implements OnInit {
     }
     this.showPopup = true;
   }
-  nextEnable = true;
+  nextEnable = false;
   onSubmit(q){
     console.log(this.selected_quiz.userchoice, this.ref_arr)
     var cnt = 0;

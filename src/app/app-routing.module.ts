@@ -7,7 +7,8 @@ import { SignupComponent } from './signup/signup.component';
 import { InformationComponent } from './information/information.component';
 import { StartComponent } from './start/start.component';
 import { ScoreComponent } from './score/score.component';
-import { HallComponent } from './hall/hall.component';
+import { WallComponent } from './wall/wall.component';
+import  { ExitComponent } from './exit/exit.component';
 
 const routes: Routes = [
   {
@@ -34,12 +35,16 @@ const routes: Routes = [
     path: "score",
     component: ScoreComponent
   },{
-    path: "halloffame",
-    component: HallComponent
+    path: "wall",
+    component: WallComponent
   },
   {
     path: "form",
     component: SignupComponent  
+  },
+  {
+    path: "exit",
+    component: ExitComponent  
   },
   {
     path:"information",
