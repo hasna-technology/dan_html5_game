@@ -32,7 +32,6 @@ const routes: Routes = [
     component: AssessmentComponent  
   },
   {
-<<<<<<< HEAD
     path: "score",
     component: ScoreComponent
   },{
@@ -41,9 +40,6 @@ const routes: Routes = [
   },
   {
     path: "form",
-=======
-    path: "signup",
->>>>>>> 66db35c05b328aed3a5bd8668679193d0281f9f2
     component: SignupComponent  
   },
   {

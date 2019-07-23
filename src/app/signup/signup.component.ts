@@ -1,11 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgModule } from '@angular/core';
 import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
-<<<<<<< HEAD
 import { moveIn, fallIn } from '../router.animations';
-=======
-import { Router } from '@angular/router';
->>>>>>> 66db35c05b328aed3a5bd8668679193d0281f9f2
 
 
 @Component({
@@ -15,14 +11,7 @@ import { Router } from '@angular/router';
   animations: [moveIn(), fallIn()],
   host: {'[@moveIn]': '' }
 })
-@NgModule({
-  imports: [
-    
-    
-  ],
-  exports: [Router],
-  declarations: []
-})
+
 export class SignupComponent implements OnInit {
   angForm: FormGroup;
   messageForm: FormGroup;
