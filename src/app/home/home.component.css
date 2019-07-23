@@ -1,3 +1,11 @@
+#bg_welcome
+{
+    background-image: url('/./assets/image/bg_01.180.png');
+    background-position: right center;
+    background-size: cover;
+    height: 100vh;
+    color:#fff;
+}
 .ref_button{
     border: 1px solid #eee;
     margin-bottom: 10px;

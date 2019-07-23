@@ -47,18 +47,18 @@ button:focus {
 }
 
 .number:nth-child(1) {
-  left: 41%;
-  top: 77%;
+  left: 32%;
+  top: 79%;
 }
 
 .number:nth-child(2) {
-  left: 2%;
-  top: 27%;
+  left: 12%;
+  top: 30%;
 }
 
 .number:nth-child(3) {
-  left: 15%;
-  top: 9%;
+  left: 20%;
+    top: 15%;
 }
 
 .number:nth-child(4) {
@@ -67,13 +67,13 @@ button:focus {
 }
 
 .number:nth-child(5) {
-  left: 61%;
+  left: 55%;
   top: 40%;
 }
 
 .number:nth-child(6) {
-  left: 84%;
-  top: 30%;
+  left: 77%;
+    top: 19%;
 }
 
 .number:nth-child(7) {

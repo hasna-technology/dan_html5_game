@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { GeneralService } from '../service/general.service';
@@ -19,7 +19,7 @@ export class AssessmentComponent implements OnInit {
   id;
   ref_arr;
   ref_name;
-
+  
   ngOnInit() {
     this.routeSub = this.route.params.subscribe(params => {
       console.log(params) //log the entire params object
@@ -53,9 +53,10 @@ export class AssessmentComponent implements OnInit {
       this.left = event.target.offsetLeft + 60;
     }
     this.showPopup = true;
+    
   }
   nextEnable = false;
-  onSubmit(q){
+  onSubmit(quiz){
     console.log(this.selected_quiz.userchoice, this.ref_arr)
     var cnt = 0;
     //var score = 0;

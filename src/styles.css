@@ -4,12 +4,12 @@
 }
 
 .btn-primary {
-    color: #fff;
-    background-color: #b6000F;
-    border-color: #b6000F;
+    color: #000;
+    background-color: #ffe608;
+    border-color: #ffe608;
 }
 .btn-primary:hover {
-    color: #fff;
+    color: #000;
     background-color: rgb(155, 2, 15);
     border-color: rgb(155, 2, 15);
 }

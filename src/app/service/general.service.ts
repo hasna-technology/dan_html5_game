@@ -44,8 +44,8 @@ export class GeneralService {
     {
       id:0,
       name : "R 448A",
-      image: "assets/image/cold.png",
-      title: "You have selected MBP, R448A, what will be the consequence?",
+      image: "assets/image/cold.jpg",
+      title: "title_1",
       quiz:[
         {
           id: 1,
@@ -204,8 +204,8 @@ export class GeneralService {
     {
       id:1,
       name : "R 449A",
-      image: "assets/image/cold.png",
-      title: "You have selected MBP, R449A, what will be the consequence?",
+      image: "assets/image/cold.jpg",
+      title: "title_2",
       quiz:[
         {
           position: "left",
@@ -341,9 +341,9 @@ export class GeneralService {
     {
       id:2,
       name : "R 450A",
-      image: "assets/image/cold.png",
-      title: "You have selected MBP, R450A, what will be the consequence?",
-      quiz:[
+      image: "assets/image/cold.jpg",
+      title: "title_3",
+      quiz:[ 
         {
           position: "left",
           id:1,
@@ -478,8 +478,8 @@ export class GeneralService {
     {
       id:3,
       name : "R 452A",
-      image: "assets/image/cold.png",
-      title: "You have selected MBP, R452A, what will be the consequence?",
+      image: "assets/image/cold.jpg",
+      title: "title_4",
       quiz:[
         {
           position: "left",
@@ -615,8 +615,8 @@ export class GeneralService {
     {
       id:4,
       name : "R 513A",
-      image: "assets/image/cold.png",
-      title: "You have selected MBP, R513A, what will be the consequence?",
+      image: "assets/image/cold.jpg",
+      title: "title_5",
       quiz:[
         {
           position: "left",
@@ -756,8 +756,8 @@ export class GeneralService {
     {
       id:0,
       name : "R 449A",
-      image: "assets/image/cold.png",
-      title: "You have selected MBP, R449A, what will be the consequence?",
+      image: "assets/image/cold.jpg",
+      title: "title_6",
       quiz:[
         {
           id:1,
@@ -892,8 +892,8 @@ export class GeneralService {
     {
       id:1,
       name : "R 452A",
-      image: "assets/image/cold.png",
-      title: "You have selected MBP, R452A, what will be the consequence?",
+      image: "assets/image/cold.jpg",
+      title: "title_7",
       quiz:[
         {
           id:1,
