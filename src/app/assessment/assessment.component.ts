@@ -88,12 +88,12 @@ export class AssessmentComponent implements OnInit {
     /*
     if(this.ref_name == "mbp"){
       if(new_id > this.service.get_length(this.service.get_mbp())-1){
-        this.router.navigateByUrl('/home');
+        this.router.navigateByUrl('/start');
         return;
       }
     }else{
       if(new_id > this.service.get_length(this.service.get_lbp())-1){
-        this.router.navigateByUrl('/home');
+        this.router.navigateByUrl('/start');
         return;
       }
     }
@@ -123,6 +123,8 @@ export class AssessmentComponent implements OnInit {
     //console.log(id);
     return this.service._content[id];
   }
-  
+  noThanks(){
+    this.router.navigateByUrl('/information');
+  }
   
 }

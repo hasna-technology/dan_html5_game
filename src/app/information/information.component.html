@@ -1,10 +1,11 @@
 <p>
   information works!
 </p>
-<div class="col-md-12">
-  <h2> SignUP details</h2>
-  <div class="table-responsive table-container">
-    <table class="table">
+<div class="container">
+  <div class="col-md-12">
+    <h2>Wall of Fame</h2>
+
+    <table class="table table-bordered ">
       <thead>
         <tr>
           <th>Username</th>
@@ -14,14 +15,22 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <!-- <td>{{ angForm.controls.username.value }}</td>
-          <td>{{ angForm.controls.score.value }}</td>
-          <td>{{ angForm.controls.country.value }}</td>
-          <td>{{ angForm.controls.email.value }}</td> -->
-
+        <tr *ngFor="let f of fames">
+          <td>{{  f.username }}</td>
+          <td>{{ f.score }}</td>
+          <td>{{ f.country }}</td>
+          <td>{{ f.email }}</td>
         </tr>
       </tbody>
     </table>
+  </div>
+  <p>Submit your high score to our Wall of Fame and you could win a prize!
+    Sign up below to enter.
+  </p>
+  <div>
+    <button (click)="onClickMe()" class="button btn-primary"  >I want to win! </button>
+  </div> 
+  <div>
+    <button class="button btn-primary mt-3"   (click)="nothanks()" >No thanks.</button>
   </div>
 </div>

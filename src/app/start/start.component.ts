@@ -2,8 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { GeneralService } from '../service/general.service';
 import anime from 'animejs';
+<<<<<<< HEAD
 import { moveIn, fallIn } from '../router.animations';
 import { Subscription } from 'rxjs';
+=======
+import { $ } from 'protractor';
+>>>>>>> 66db35c05b328aed3a5bd8668679193d0281f9f2
 
 @Component({
   selector: 'app-start',
@@ -47,7 +51,7 @@ export class StartComponent implements OnInit {
       this.router.navigateByUrl('/assessment/'+ref + "/" + id);
   }
 
-  step2_click(id){
+  step2_click(id){    
     this.step2_id = id;
     this.show('.step3')
   }
@@ -73,4 +77,5 @@ export class StartComponent implements OnInit {
   hide(selector){
     (document.querySelector(selector) as HTMLElement).style.opacity = '0';
   }
+  
 }

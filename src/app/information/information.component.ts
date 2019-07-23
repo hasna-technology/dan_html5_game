@@ -15,4 +15,30 @@ export class InformationComponent implements OnInit {
   ngOnInit() {
 
 }
+fames=[
+  {
+    username:"sam",
+    score:"2000",
+    country:"IND",
+    email:""
+  },
+  {
+    username:"tom",
+    score:"2500",
+    country:"UAE",
+    email:""
+  },
+  {
+    username:"bob",
+    score:"2200",
+    country:"SA"
+
+  },
+];
+onClickMe(){
+  this.router.navigateByUrl('signup');
+}
+nothanks(){
+  this.router.navigateByUrl('home');
+}
 }

@@ -1,11 +1,21 @@
+<<<<<<< HEAD
 <div class="assess container {{ref_name}}" id="assessment_{{id}}">
   <h4 class="p-5">{{getContent(ref_arr.title)}}</h4>
+=======
+<div class="container {{ref_name}}" id="assessment_{{id}}">
+  <h4 class="p-5">{{ref_arr.title}}</h4>
+>>>>>>> 66db35c05b328aed3a5bd8668679193d0281f9f2
 
   <div class="number_group">
     <img class="full-width" src="{{ref_arr.image}}">
     <div>
+<<<<<<< HEAD
       <!-- Number -->
       <button type="button" class="number" *ngFor="let q of ref_arr.quiz; let i = index" [ngClass]="{ 'blink': !q.completed, 'bg-secondary' : q.completed}"
+=======
+      <button type="button" class="number" *ngFor="let q of ref_arr.quiz; let i = index"
+        [ngClass]="{ 'blink': !q.completed}"
+>>>>>>> 66db35c05b328aed3a5bd8668679193d0281f9f2
         [ngStyle]="{'border-color': ref_arr.quiz[i].userchoice == undefined ? '#FF0000' : '#00FF00'}"
         (click)="onclick(q, $event)" title="open" data-toggle="popover" data-placement="right">{{q.id}}
       </button>
@@ -14,25 +24,35 @@
     <div id="popup" [style.top.px]="top" [style.left.px]="left" class="popup" *ngIf="showPopup">
       <div class="close button" (click)="showPopup = false"><i class="fa fa-times" aria-hidden="true"></i></div>
       <div class="question" *ngIf="selected_quiz" [innerHTML]="getContent(selected_quiz.question)">
-        
+
       </div>
-      <div class="answer" *ngIf="selected_quiz" >
+      <div class="answer" *ngIf="selected_quiz">
         <div *ngFor="let choice of selected_quiz.choices; let i = index">
-          <input type="radio" name="choice" 
-          [checked]="selected_quiz.userchoice === i" 
-          (change)="selected_quiz.userchoice = i" id="{{i}}">
+          <input type="radio" name="choice" [checked]="selected_quiz.userchoice === i"
+            (change)="selected_quiz.userchoice = i" id="{{i}}">
           <span [innerHTML]="getContent(choice.text)"></span>
         </div>
       </div>
       <div class="footer">
         <input type="button" class="btn next-button" [disabled]="selected_quiz.userchoice == undefined" value="Submit" (click)="onSubmit(selected_quiz)">
       </div>
+
     </div>
+<<<<<<< HEAD
     <div class='float-right'>
       
       <input type="button" class="btn next-button" *ngIf="nextEnable" value="Next Challenge" (click) = "onNext()"> &nbsp;
       <a routerLink="/score" class="btn next-button" *ngIf="nextEnable">No Thanks</a> 
     </div>
+=======
+  </div>
+  <input type="button" class="btn next-button float-right" value="Next" (click)="onNext()">
+
+  <div class="thanks">
+    <input type="button" class="btn next-button float-right" value="No thanks. 
+      (wall of fame slide 8)
+     " (click)="noThanks()">
+>>>>>>> 66db35c05b328aed3a5bd8668679193d0281f9f2
   </div>
   <!-- <input type="button" class="btn next-button " routerLink="/form" value="Form"> -->
 </div>
