@@ -1,7 +1,11 @@
 {
-    "welcome" : "Welcome to CoolGame III",
-    "txt1" : "<p>Your task: replace the refrigerant in an R404A system and determine the consequences. Challenge your knowledge and skill for the chance to win a prize!</p><p>Click here to read the <a href='#'>contest rules.</a></p>",
-    "txt3" : "Play the game!",
+    "welcome" : "Welcome to",
+    "game" : "CoolGame III",
+    "your_task" : "Your task",
+    "next" : "Next",
+    "txt1" : "<b>Replace R404A</b> in your system and determine the consequences. Challenge your knowledge and skill for the chance to win a prize!",
+    "instr": "Click here to read the contest rules.",
+    
     "txt4" : "1. Select system",
     "txt5" : "2. Select new refrigerant",
     "txt6" : "3. Determine the consequences",

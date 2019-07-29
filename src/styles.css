@@ -1,4 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,700&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+}
+a {
+    color: #dddddd;
+}
+
+a:hover {
+    color: #fff;
+}
+.italic{
+    font-style: italic;
+}
 .button{
     cursor: pointer;
 }
@@ -10,19 +24,19 @@
 }
 .btn-primary:hover {
     color: #000;
-    background-color: rgb(155, 2, 15);
-    border-color: rgb(155, 2, 15);
+    background-color: #FFC107;
+    border-color: #FFC107;
 }
 .btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle,
 .dropdown-item.active, .dropdown-item:active {
     color: #fff;
-    background-color: #90020e;
-    border-color: #90020e;
+    background-color: #FFC107;
+    border-color: #FFC107;
 }
 
 .btn-primary.focus, .btn-primary:focus {
     outline: 0;
-    box-shadow: 0 0 0 0.2rem rgb(182,0,15);
+    box-shadow: 0 0 0 0.2rem #FFC107;
 }
 
 .animate{
@@ -38,3 +52,17 @@
 .c-table th {
     font-weight: bold;
 }
+
+
+.light-font {
+    font-weight: 100;
+  }
+  .font-light
+  {
+    font-weight: 300;
+  }
+
+  .font-medium
+  {
+    font-size:20px;
+  }

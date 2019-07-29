@@ -14,6 +14,7 @@ import { StartComponent } from './start/start.component';
 import { ScoreComponent } from './score/score.component';
 import { WallComponent } from './wall/wall.component';
 import { ExitComponent } from './exit/exit.component';
+import { ImageSequenceComponent } from './comp/image-sequence/image-sequence.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ExitComponent } from './exit/exit.component';
     ScoreComponent,
     WallComponent,
     ExitComponent,
+    ImageSequenceComponent,
   ],
   imports: [
     BrowserModule,

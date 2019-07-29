@@ -61,37 +61,4 @@ export class AppComponent implements OnInit {
     return this.route.url.indexOf('/assessment') != -1;
   }
 
-languages = [
-  {
-    name: 'English',
-    code: 'en'
-  },
-  {
-    name: 'French',
-    code: 'fr'
-  },
-  {
-    name: 'Danish',
-    code: 'da'
-  },
-  {
-    name: 'Spanish',
-    code: 'es'
-  },
-  {
-    name: 'Chinese',
-    code: 'zh'
-  }
-]
-  
-selectedLang = 'en';
-
-  setContent(lang){
-    this.selectedLang = lang
-    this.service.getJson(lang);
-  }
-  
-  getLanguage(code){
-    return this.languages.filter(item => item.code === code)[0].name;
-  }
 }

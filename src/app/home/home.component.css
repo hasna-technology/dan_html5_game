@@ -1,16 +1,80 @@
-#bg_welcome
+.image-sequence {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.img_div
 {
-    background-image: url('/./assets/image/bg_01.180.png');
+    width: 100%;
+    height: 100vh;
     background-position: right center;
     background-size: cover;
-    height: 100vh;
-    color:#fff;
+  
 }
-.ref_button{
-    border: 1px solid #eee;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    background-color: #ffc107;
-    padding: 5px;
-    color: #fff;
+.image-sequence img {
+  width: 100%;
+}
+
+#homepage {
+  background-image: url('/./assets/image/bg_01.180.png');
+  background-position: right center;
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+}
+
+.ref_button {
+  border: 1px solid #eee;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #ffc107;
+  padding: 5px;
+  color: #fff;
+}
+
+.full-hg {
+  height: 100vh;
+}
+
+.flex {
+  display: flex;
+  /*justify-content: center;
+  flex-direction: column;*/
+  padding-top: 10%;
+}
+
+.half-wd {
+  width: 60%;
+}
+
+
+.game-title {
+  font-size: 48px;
+}
+
+.choose_language {
+  max-width: 300px;
+}
+.choose_language .title {
+  border: 1px solid #fff;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.choose_language .body a {
+  color: #333;
+  cursor: pointer;
+}
+
+.choose_language .body a:hover {
+  color: #b6000f;
+}
+.font-thin{
+  font-weight: 100;
 }
