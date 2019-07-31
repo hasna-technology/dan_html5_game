@@ -1,15 +1,17 @@
 {
     "welcome" : "Welcome to",
     "game" : "CoolGame III",
-    "txt1" : "<b>Your task</b><br>Replace the refrigerant in an R404A system and determine the consequences. Challenge your knowledge and skill for the chance to win a prize!</<b>",
+    "your_task" : "Your task",
+    "next" : "Next",
+    "txt1" : "<b>Replace R404A</b> in your system and determine the consequences. Challenge your knowledge and skill for the chance to win a prize!",
     "instr": "Click here to read the contest rules.",
-    "txt3" : "Play the game!",
+    
     "txt4" : "1. Select system",
     "txt5" : "2. Select new refrigerant",
     "txt6" : "3. Determine the consequences",
     "txt7" : "<p>To obtain the same function and temperatures, how will you change the setup and components?</p>",
     
-    "title_1" : "You’ve switched from R404A to R448A. How will this affect the system?",
+    "title_1" : "You’ve switched from R404A to <span class='font-semibold text-2rem'>R448A</span>. How will this affect the system?",
     "title_2" : "You’ve switched from R404A to R449A. How will this affect the system?",
     "title_3" : "You’ve switched from R404A to R450A. How will this affect the system?",
     "title_4" : "You’ve switched from R404A to R452A. How will this affect the system?",
