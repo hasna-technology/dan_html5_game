@@ -1,38 +1,149 @@
 <div class="assess container {{ref_name}}" id="assessment_{{id}}">
-  <h4 class="p-5">{{getContent(ref_arr.title)}}</h4>
-
-  <div class="number_group">
+  <!-- {{selected_quiz | json}}, {{showPopup}} -->
+  <div class="number_group" [ngClass]="{'blur' : panel == true}">
+    <div class="top_panel">
+      <h4 class="font-thin" [innerHTML]="getContent(ref_arr.title)"></h4>
+    </div>
     <img class="full-width" src="{{ref_arr.image}}">
     <div>
       <!-- Number -->
-      <button type="button" class="number" *ngFor="let q of ref_arr.quiz; let i = index" [ngClass]="{ 'blink': !q.completed, 'bg-secondary' : q.completed}"
-        [ngStyle]="{'border-color': ref_arr.quiz[i].userchoice == undefined ? '#FF0000' : '#00FF00'}"
-        (click)="onclick(q, $event)" title="open" data-toggle="popover" data-placement="right">{{q.id}}
-      </button>
-    </div>
+      <div class="poitner" *ngFor="let q of ref_arr.quiz; let i = index" (click)="onclick(q, $event)" title="open"
+        data-toggle="popover" data-placement="right">
+        <img class="pointer_img" src="assets/image/pointer.png" alt=""><br>
+        <button class="number" [ngClass]="{ 'blink': !q.completed, 'bg-green' : q.completed}"
+          [ngStyle]="{'border-color': ref_arr.quiz[i].userchoice == undefined ? '#FF0000' : '#00FF00'}">
+          {{q.id}}
+        </button>
 
-    <div id="popup" [style.top.px]="top" [style.left.px]="left" class="popup" *ngIf="showPopup">
-      <div class="close button" (click)="showPopup = false"><i class="fa fa-times" aria-hidden="true"></i></div>
-      <div class="question" *ngIf="selected_quiz" [innerHTML]="getContent(selected_quiz.question)">
+        <div id="popup" class="popup" *ngIf="(selected_quiz == q && showPopup == true) || show_result == true">
+          <!-- <div class="close button" (click)="showPopup = false"><i class="fa fa-times" aria-hidden="true"></i></div> -->
+          <div class="question" [innerHTML]="getContent(q.question)" [ngClass]="{'correct' : q.userchoice != undefined && q.choices[q.userchoice].correct == true && show_result == true,
+                      'incorrect' : q.userchoice != undefined && q.choices[q.userchoice].correct != true && show_result == true
+          }">
+          </div>
+          <div class="answer">
 
-      </div>
-      <div class="answer" *ngIf="selected_quiz">
-        <div *ngFor="let choice of selected_quiz.choices; let i = index">
-          <input type="radio" name="choice" [checked]="selected_quiz.userchoice === i"
-            (change)="selected_quiz.userchoice = i" id="{{i}}">
-          <span [innerHTML]="getContent(choice.text)"></span>
+            <div class="choice" *ngFor="let choice of q.choices; let i = index"
+              [ngClass]="{'disable' : q.completed == true}" (click)="q.completed != true ? q.userchoice = i : ''">
+              <div class="eval" *ngIf="q.userchoice === i && show_result == true"
+                [ngClass]="{'correct' : choice.correct == true}">
+                <img src="{{ choice.correct == true ? 'assets/image/tick.png' :  'assets/image/wrong.png'}}" alt="">
+              </div>
+              <div class="square_radio">
+                <div [ngClass]="{
+                              'tick': q.userchoice != i && choice.correct == true && show_result == true , 
+                              'wrong': q.userchoice != i && choice.correct == false && show_result == true, 
+                              'circle' : q.userchoice === i }">
+
+                </div>
+              </div>
+              <!-- <input type="radio" name="choice" [checked]="q.userchoice === i" (change)="q.userchoice = i" id="{{i}}"> -->
+              <span [innerHTML]="getContent(choice.text)"></span>
+            </div>
+          </div>
+          <div class="footer">
+            <input type="button" class="btn small-outliner" *ngIf="q.completed != true"
+              [disabled]="q.userchoice == undefined" value="Submit" (click)="onSubmit(q);">
+          </div>
         </div>
       </div>
-      <div class="footer">
-        <input type="button" class="btn next-button" [disabled]="selected_quiz.userchoice == undefined" value="Submit" (click)="onSubmit(selected_quiz)">
-      </div>
-
     </div>
-    <div class='float-right'>
-      
-      <input type="button" class="btn next-button" *ngIf="nextEnable" value="Next Challenge" (click) = "onNext()"> &nbsp;
-      <a routerLink="/score" class="btn next-button" *ngIf="nextEnable">No Thanks</a> 
+    <!--     -->
+    <div class='next_panel text-center' *ngIf="ref_arr.completed"  >
+      <!--*ngIf="nextEnable"-->
+      <input type="button" class="btn btn-primary rounded-pill next" value="Next" (click)="onNext()"> <br>
+      <button class="btn btn-light rounded-pill"
+        (click)="toggleAnswer()">{{show_result ? "Hide Answer" : "Show Answer"}}</button>
+    </div>
+    <div class="bottom_bar">
+      <div class="d-flex flex-row">
+        <div class="d-flex flex-col">
+          <div class="title">System</div>
+          <div class="content">Cold Room</div>
+        </div>
+        <div class="d-flex flex-col">
+          <div class="score" *ngIf="ref_arr.completed">Your Score: <span class=''>{{ref_arr.score}}</span> out of
+            {{ref_arr.total}}</div>
+        </div>
+        <div class="d-flex flex-col">
+          <div class="title">Refrigerant</div>
+          <div class="content">{{ref_arr.name}}</div>
+          <div class="icon"><img src="assets/image/refrigerant_Icon.png" alt=""></div>
+        </div>
+        <div class="d-flex flex-col">
+          <div class="title">Temprture</div>
+          <div class="content">5°C / 40°F</div>
+          <div class="icon"><img src="assets/image/temperature_icon.png" alt=""></div>
+        </div>
+      </div>
     </div>
   </div>
+
+
+  <div class="dark_bg" *ngIf="panel==true">
+    <div class="panel ">
+      <div class="step text-center" *ngIf="step == 1">
+        <button class="btn btn-red rounded-pill" routerLink="/home/1">Next Challenge</button><br><br>
+        <button class="btn btn-outline-secondary rounded-pill" (click)="step = 2">No thanks</button>
+      </div>
+      <div class="yourscore_panel  text-center" *ngIf="step == 2">
+        <h1 class="font-thin">Your Score</h1>
+        <div class="box border-box">
+          <div class="row">
+            <div class="col-sm-5">
+              <div class="row">
+                <div class="col-12 table_header">
+                  Cold room score
+                </div>
+              </div>
+              <div class="border-box margin-row">
+
+                <div class="row " *ngFor="let item of mbp">
+                  <div class="col-6 ">{{item.name}}</div>
+                  <div class="col-6 ">{{item.score}}</div>
+                </div>
+              </div>
+              <div class="row mt-2 border">
+                <div class="col-6 "><b>Total</b></div>
+                <div class="col-6 "><b></b></div>
+              </div>
+            </div>
+
+            <div class="col-sm-2"></div>
+            <div class="col-sm-5">
+              <div class="row">
+                <div class="col-12 table_header">
+                  Freezer room score
+                </div>
+              </div>
+              <div class="border-box margin-row">
+                <div class="row" *ngFor="let item of lbp">
+                  <div class="col-6">{{item.name}}</div>
+                  <div class="col-6">{{item.score}}</div>
+                </div>
+                <div class="row" *ngFor="let item of lbp">
+                  <div class="col-6">&nbsp;</div>
+                  <div class="col-6">&nbsp;</div>
+                </div>
+              </div>
+              <div class="row mt-2 border">
+                  <div class="col-6 "><b>Total</b></div>
+                  <div class="col-6 "><b></b></div>
+              </div>
+            </div>
+          </div>
+
+          <p class="mt-5"><b>Total in all <span class=''>{{totalScore}}</span></b>out of {{total}}</p>
+          <p class="mt-3">Great Job! would you like to continue?</p>
+          <a href="/" class="btn btn-red rounded-pill">Play Again</a><br><br>
+          <button routerLink="/wall" class="btn btn-red rounded-pill">Send my result to Wall of Fame</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
   <!-- <input type="button" class="btn next-button " routerLink="/form" value="Form"> -->
 </div>

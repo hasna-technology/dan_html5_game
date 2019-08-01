@@ -1,68 +1,121 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,700&display=swap');
+
 body {
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
+
 a {
-    color: #dddddd;
+  color: #dddddd;
 }
 
 a:hover {
-    color: #fff;
+  color: #fff;
 }
-.italic{
-    font-style: italic;
+
+.italic {
+  font-style: italic;
 }
-.button{
-    cursor: pointer;
+
+.button {
+  cursor: pointer;
 }
 
 .btn-primary {
-    color: #000;
-    background-color: #ffe608;
-    border-color: #ffe608;
-}
-.btn-primary:hover {
-    color: #000;
-    background-color: #FFC107;
-    border-color: #FFC107;
-}
-.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle,
-.dropdown-item.active, .dropdown-item:active {
-    color: #fff;
-    background-color: #FFC107;
-    border-color: #FFC107;
+  color: #000;
+  background-color: #ffe608;
+  border-color: #ffe608;
 }
 
-.btn-primary.focus, .btn-primary:focus {
+.btn-primary:hover {
+  color: #000;
+  background-color: #FFC107;
+  border-color: #FFC107;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle,
+.dropdown-item.active,
+.dropdown-item:active {
+  color: #fff;
+  background-color: #FFC107;
+  border-color: #FFC107;
+}
+
+.btn-primary.focus,
+.btn-primary:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem #FFC107;
+}
+
+.btn-red {
+    color: #fff;
+    background-color: #E1020F;
+    border-color: #E1020F;
+  }
+  
+  .btn-red:hover {
+    color: #fff;
+    background-color: #b6000F;
+    border-color: #b6000F;
+  }
+  
+  .btn-red:not(:disabled):not(.disabled).active,
+  .btn-red:not(:disabled):not(.disabled):active,
+  .show>.btn-red.dropdown-toggle,
+  .dropdown-item.active,
+  .dropdown-item:active {
+    color: #fff;
+    background-color: #b6000F;
+    border-color: #b6000F;
+  }
+  
+  .btn-red.focus,
+  .btn-red:focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem #FFC107;
-}
+  }
 
-.animate{
-    opacity: 0;
+.animate {
+  opacity: 0;
 }
 
 .c-table td,
 .c-table th {
   padding: 5px 10px;
-  border:1px solid #eee;
+  border: 1px solid #eee;
 }
 
 .c-table th {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 
 .light-font {
-    font-weight: 100;
-  }
-  .font-light
-  {
-    font-weight: 300;
-  }
+  font-weight: 100;
+}
 
-  .font-medium
-  {
-    font-size:20px;
-  }
+.font-thin{
+  font-weight: 100;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-medium {
+  font-size: 20px;
+}
+.font-semibold {
+  font-weight: 500;
+}
+.text-2rem{
+  font-size:2rem;
+}
+.big_header{
+  font-size:2.5rem;
+}
+.biggest-text {
+  font-size: 3.5rem;
+}

@@ -1,6 +1,8 @@
 <div class="container mt-5">
-    <h2>Wall of fame:</h2>
-    <table class="c-table">
+  <div class="red_panel ">
+    <div class="step text-center" *ngIf="step == 1">
+      <h2 class="biggest-text font-thin">Wall of fame</h2>
+      <table class="c-table mt-5">
         <thead>
           <tr>
             <th>Nickname</th>
@@ -8,7 +10,7 @@
             <th>Score</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="white_panel">
           <tr *ngFor="let item of wall">
             <td>{{item.name}}</td>
             <td>{{item.country}}</td>
@@ -17,9 +19,107 @@
         </tbody>
       </table>
       <br>
-      <p>Submit your high score to our Wall of Fame and you could win a prize!</p>
-      <p>Sign up below to enter.</p>
-      
-      <a routerLink="/form" class="btn btn-primary button" >I wanted to win!</a> &nbsp;
-      <a routerLink="/exit"  class="btn btn-secondary button" >No thanks </a>
+      <p>Do you want to get a chance to win a prize?</p>
+      <p class="font-thin big_header">Sign up below to enter</p>
+
+      <button (click)="step = 2" class="btn btn-primary rounded-pill text-black">I wanted to win!</button> <br><br>
+      <button (click)="step = 3" class="btn btn-outline-light rounded-pill">No thanks </button>
+    </div>
+
+    <div class="step" *ngIf="step == 2">
+      <p>Do you have what it takes to compete with industry experts from around the world ?<br>Sign up for the
+        international competition and you could win our Grand Prize !</p>
+      <h2 class="font-thin">Please register below:</h2>
+      <p class="notes font-thin">Danfoss complies with the European GDPR regulations and thereby guarantee to keep any
+        information provided here safe from abuse</p>
+      <form [formGroup]="angForm" novalidate (ngSubmit)="onSubmit()" class="signup_form ">
+        <div class="form-group row">
+          <label for="username" class="col-sm-3 col-form-label">Your nick name</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" placeholder="your name" formControlName="username">
+            <div *ngIf="submitted && angForm.controls['username'].invalid" class="error">
+              <div *ngIf="angForm.controls['username'].errors.required">Name is required.</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="score" class="col-sm-3 col-form-label">Your score</label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" placeholder="your score" disabled formControlName="score">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="country" class="col-sm-3 col-form-label">Your country (region)</label>
+          <div class="col-sm-6">
+            <select type="number" class="form-control custom-select-mb" formControlName="country">
+              <option value='0'>Select Country</option>
+              <option *ngFor="let country of countries" value='{{country.code}}'>{{country.name}}</option>
+            </select>
+            <div
+              *ngIf="angForm.controls['country'].invalid && (angForm.controls['country'].dirty || angForm.controls['country'].touched || angForm.controls['country'].untouched )"
+              class="error">
+              <div *ngIf="submitted && angForm.controls['country'].errors.required">Country is required.</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="email" class="col-sm-3 col-form-label">*Your email address</label>
+          <div class="col-sm-6">
+            <input type="email" class="form-control" placeholder="your email" formControlName="email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="email" name="email">
+            <div
+              *ngIf="angForm.controls['email'].invalid && (angForm.controls['email'].dirty || angForm.controls['email'].touched || angForm.controls['email'].untouched )"
+              class="error">
+              <div *ngIf="submitted && angForm.controls['email'].errors.required">Email is required.</div>
+              <div *ngIf="submitted && angForm.controls['email'].errors?.pattern">Invalid email.</div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-12">
+            <button type="submit" value="Send message" class="btn btn-primary">Sign up</button>
+          </div>
+        </div>
+      </form>
+      <p>Get competition updates - follow Danfoss on social media <img src="assets/image/social.png" alt=""></p>
+      <div class="text-center">
+        <button class="btn btn-outline-light rounded-pill">Exit</button>
+      </div>
+    </div>
+
+    <div class="step text-center" *ngIf="step == 3">
+      <br>
+      <br>
+      <h2 class="biggest-text font-thin">Thanks for playing CoolGame !!!</h2>
+
+      <div class="d-flex next_panel">
+        <div class="text-center">
+          <div class="img mt-3">
+            <img src="assets/image/invite.png" alt="">
+          </div>
+          <a href='https://www.facebook.com/sharer/sharer.php?u=danfoss.com' class="btn btn-primary rounded-pill mt-3">Invite</a>
+            <p class=" small_text">Invite a friend to play</p>
+        </div>
+
+        <div class="text-center">
+          <div class="img mt-3">
+            <img src="assets/image/tools.png" alt="">
+          </div>
+          <a href='http://refrigerantweek.danfoss.com' class="btn btn-primary rounded-pill mt-3">Tools</a>
+              <p class=" small_text">Access our free </p>
+        </div>
+
+        <div class="text-center">
+          <div class="img mt-3">
+            <img src="assets/image/elesson.png" alt="">
+          </div>
+          <a href='http://choose.danfoss.com/education/elearning/#/' class="btn btn-primary rounded-pill mt-3">e-Lesson</a>
+                <p class=" small_text">Take some free e-Lessons</p>
+        </div>
+      </div>
+
+
+      <a href="#" class="btn btn-outline-light rounded-pill">Exit </a>
+    </div>
+  </div>
 </div>

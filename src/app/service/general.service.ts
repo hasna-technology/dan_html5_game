@@ -43,9 +43,11 @@ export class GeneralService {
   mbp_ref = [
     {
       id:0,
-      name : "R 448A",
+      group:"mbp",
+      name : "R448A",
       image: "assets/image/cold.jpg",
       title: "title_1",
+      total : 1200,
       quiz:[
         {
           id: 1,
@@ -177,7 +179,7 @@ export class GeneralService {
           
         },
         {
-          id: "3a",
+          id: 7,
           position: "left",
           question:"quiz6_q",
           choices:[
@@ -203,7 +205,8 @@ export class GeneralService {
     },
     {
       id:1,
-      name : "R 449A",
+      group:"mbp",
+      name : "R449A",
       image: "assets/image/cold.jpg",
       title: "title_2",
       quiz:[
@@ -340,7 +343,8 @@ export class GeneralService {
     },
     {
       id:2,
-      name : "R 450A",
+      group: "mbp",
+      name : "R450A",
       image: "assets/image/cold.jpg",
       title: "title_3",
       quiz:[ 
@@ -475,146 +479,11 @@ export class GeneralService {
         }
       ]
     },
-    {
-      id:3,
-      name : "R 452A",
-      image: "assets/image/cold.jpg",
-      title: "title_4",
-      quiz:[
-        {
-          position: "left",
-          id:1,
-          question:"quiz1_q",
-          choices:[
-            {
-              text:"ch_1_1",
-              correct:true,
-              score:100
-            },
-            {
-              text:"ch_1_2",
-              correct:false,
-              score:0
-            },
-            {
-              text:"ch_1_3",
-              correct:false,
-              score:0
-            }
-          ],
-          
-        },{
-          id:2,
-          question:"quiz2_q",
-          choices:[
-            {
-              text:"ch_1_1",
-              correct:true,
-              score:0
-            },
-            {
-              text:"ch_1_2",
-              correct:false,
-              score:0
-            },
-            {
-              text:"ch_1_3",
-              correct:true,
-              score:200
-            }
-          ],
-          
-        },{
-          id:3,
-          question:"quiz3_q",
-          choices:[
-            {
-              text:"ch_1_1",
-              correct:false,
-              score:0
-            },
-            {
-              text:"ch_1_2",
-              correct:true,
-              score:0
-            },
-            {
-              text:"ch_1_3",
-              correct:false,
-              score:300
-            }
-          ],
-          
-        },{
-          id:4,
-          question:"quiz4_q",
-          choices:[
-            {
-              text:"ch_1_1",
-              correct:false,
-              score:400
-            },
-            {
-              text:"ch_1_2",
-              correct:false,
-              score:0
-            },
-            {
-              text:"ch_1_3",
-              correct:true,
-              score:0
-            }
-          ],
-          
-        },{
-          id:5,
-          question:"quiz5_q",
-          choices:[
-            {
-              text:"ch_1_1",
-              correct:false,
-              score:0
-            },
-            {
-              text:"ch_1_2",
-              correct:true,
-              score:0
-            },
-            {
-              text:"ch_1_3",
-              correct:false,
-              score:500
-            }
-          ],
-          
-        },{
-          position: "left",
-          id:6,
-          question:"quiz6_q",
-          choices:[
-            {
-              text:"ch_1_1",
-              correct:false,
-              score:0
-            },
-            {
-              text:"ch_1_2",
-              correct:false,
-              score:0
-            },
-            {
-              text:"ch_1_3",
-              correct:true,
-              score:600
-            }
-          ],
-          
-        }
-      ]
-    },
+    
     {
       id:4,
-      name : "R 513A",
+      group: "mbp",
+      name : "R513A",
       image: "assets/image/cold.jpg",
       title: "title_5",
       quiz:[
@@ -755,7 +624,8 @@ export class GeneralService {
   lbp_ref = [
     {
       id:0,
-      name : "R 449A",
+      group: "lbp",
+      name : "R449A",
       image: "assets/image/cold.jpg",
       title: "title_6",
       quiz:[
@@ -891,7 +761,8 @@ export class GeneralService {
     },
     {
       id:1,
-      name : "R 452A",
+      group: "lbp",
+      name : "R452A",
       image: "assets/image/cold.jpg",
       title: "title_7",
       quiz:[
@@ -1098,3 +969,142 @@ export class GeneralService {
   }
 
 }
+/*
+{
+      id:3,
+      name : "R452A",
+      image: "assets/image/cold.jpg",
+      title: "title_4",
+      quiz:[
+        {
+          position: "left",
+          id:1,
+          question:"quiz1_q",
+          choices:[
+            {
+              text:"ch_1_1",
+              correct:true,
+              score:100
+            },
+            {
+              text:"ch_1_2",
+              correct:false,
+              score:0
+            },
+            {
+              text:"ch_1_3",
+              correct:false,
+              score:0
+            }
+          ],
+          
+        },{
+          id:2,
+          question:"quiz2_q",
+          choices:[
+            {
+              text:"ch_1_1",
+              correct:true,
+              score:0
+            },
+            {
+              text:"ch_1_2",
+              correct:false,
+              score:0
+            },
+            {
+              text:"ch_1_3",
+              correct:true,
+              score:200
+            }
+          ],
+          
+        },{
+          id:3,
+          question:"quiz3_q",
+          choices:[
+            {
+              text:"ch_1_1",
+              correct:false,
+              score:0
+            },
+            {
+              text:"ch_1_2",
+              correct:true,
+              score:0
+            },
+            {
+              text:"ch_1_3",
+              correct:false,
+              score:300
+            }
+          ],
+          
+        },{
+          id:4,
+          question:"quiz4_q",
+          choices:[
+            {
+              text:"ch_1_1",
+              correct:false,
+              score:400
+            },
+            {
+              text:"ch_1_2",
+              correct:false,
+              score:0
+            },
+            {
+              text:"ch_1_3",
+              correct:true,
+              score:0
+            }
+          ],
+          
+        },{
+          id:5,
+          question:"quiz5_q",
+          choices:[
+            {
+              text:"ch_1_1",
+              correct:false,
+              score:0
+            },
+            {
+              text:"ch_1_2",
+              correct:true,
+              score:0
+            },
+            {
+              text:"ch_1_3",
+              correct:false,
+              score:500
+            }
+          ],
+          
+        },{
+          position: "left",
+          id:6,
+          question:"quiz6_q",
+          choices:[
+            {
+              text:"ch_1_1",
+              correct:false,
+              score:0
+            },
+            {
+              text:"ch_1_2",
+              correct:false,
+              score:0
+            },
+            {
+              text:"ch_1_3",
+              correct:true,
+              score:600
+            }
+          ],
+          
+        }
+      ]
+    },
+    */

@@ -16,6 +16,10 @@ const routes: Routes = [
     component: HomeComponent  
   },
   {
+    path: "home/:id",
+    component: HomeComponent  
+  },
+  {
     path: "",
     component: HomeComponent  
   },

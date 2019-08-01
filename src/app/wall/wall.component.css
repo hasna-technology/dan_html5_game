@@ -1,0 +1,40 @@
+.red_panel{
+    background-color: #D4000E;
+    color:#fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.white_panel{
+    color: #333;
+    background-color:#fff;
+}
+
+table.c-table {
+    margin: 0 auto;
+}
+
+table.c-table td {
+    padding: 10px;
+}
+
+.notes{
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.next_panel {
+    padding: 2rem;
+    justify-content: space-evenly;
+}
+
+.small_text{
+    font-size: 14px;
+    font-weight: 100;
+    padding-top: 10px;
+}
+
+.text-black{
+    color:#000;
+}
