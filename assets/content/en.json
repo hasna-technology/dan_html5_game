@@ -30,7 +30,48 @@
     "ch_1"  : " Too big",
     "ch_2"  : " Too small"  ,
     "ch_3"  : " Must be adjusted",
-    "ch_4"  : " New orifice needed"
+    "ch_4"  : " New orifice needed",
     
+    "play" : "PLAY",
 
+    "select_system": "Select the System",
+    "cold_room" : "Cold room 5°C/40°F",
+    "freezer_room" : "Freezer room -18°C/0°F",
+
+    "select_new": "Select a new refrigerant",
+
+    "determine" : "Determine the consequences",
+    "to_obtain" : "To obtain the same function and temperatures, how will you change the setup and components?",
+
+
+
+    "choose_lang" : "Choose your language",
+    "rules_title" : "Contest rules and Conditions",
+    "rules" : [
+        "<h2>General Terms and Conditions for participants </h2>",
+        "<p>The <b>#RefrigerantCoolgame</b> takes place over the period 20th August 2019 at 13:30 CET (Central European Time) to 30th September 2019 at 23:59 CET. </p>",
+        "<p>No purchase or donation necessary. Void where prohibited. A purchase or donation will not increase your likelihood of winning. </p>",
+        "<p>The competition is open to HVAC-R industry professionals over the age of 18 years from worldwide. The competition is not open to the Danfoss employees and their family. By playing the game, you agree to subscribe to the Danfoss newsletter. You can unsubscribe from the newsletter at any time.</p>",
+        "<p>There are no limits to how many times you can play the game.</p>",
+        "<h2>Winners</h2>",
+        "<p>On the 30th September, 300 winners will be drawn from all the registered participants to receive a Refrigerant expert tee-shirt. There will be 300 winners in total.</p>",
+        "<p>The winners are selected among the top participants who have achieved the highest score by the end of this period. Winning depends on being among the 300 participants with the highest score, which depends on the total number of participants and the individual score of each participant. </p>",
+        "<p>Each winner will be contacted directly via the email address provided when registering for the competition. After being notified of the prize, the winner has 72 hours to respond to the email notification and accept the prize. Should this not happen, they will lose the right to the prize, and a new winner will be drawn. The alternates will be selected based on the highest scores as ranked in the wall of fame. If no-one claims the prize, the prize will not be awarded. The winner bears the risk relating to Danfoss receiving their acceptance of the prize within the 72 hours. </p>", 
+        "<p>The winners’ first name and country of residence will be announced on the website <a href='http://www.danfoss.com' target='_blank'>www.danfoss.com</a> and on related country Danfoss website no later than 21 days after the close of the competition. By taking part in the competition, you accept these General Terms and Conditions of the competition and give your consent to the publication of your name and country. </p>",
+        "<h2>Alternative method of entry</h2>",
+        "<p>You may also enter the competition by mailing a postcard to Danfoss Commercial Compressors – BP331 – ZI Reyrieux – 01603 Trevoux - FRANCE, with your name, photo and contact information. Be sure to identify on the postcard your desire to enter the #RefrigerantCoolgame and write all the questions and correct answers. The postcard must be received within the competition period. Multiple entrants are not permitted to use the same postcard. Any attempt by any entrant to obtain more than one entry by using multiple/different names and contact information will void that entrant's entry and that entrant will be disqualified.</p>",
+        "<h2>Prize</h2>",
+        "<p>There will be 300 prizes for a total of 300 winners, one prize for each winner. Participants are only eligible to win one prize. When the first prize is won, that winner is ineligible for a second prize. The prize cannot be exchanged for cash or other goods.</p>",
+        "<p>300 refrigerant expert t-shirts, each with a value of EUR 12 excl. VAT.</p>",
+        "<p>The winners will be contacted directly. </p>",
+        "<p>Danfoss reserves the right to exclude users upon suspicion of cheating or encouraging others to cheat. </p>",
+        "<h2>Taxation</h2>",
+        "<p>Danfoss may be asked by tax authorities to disclose the identity of participants and the monetary value of services received. Please note that the prize, depending on national taxation laws, may be taxable. It is the responsibility of the participant to pay taxes on prizes in accordance with applicable taxation laws. Danfoss assumes no obligation to the participants in relation to the transfer of the prizes or the reporting of prizes to authorities. The participant hereby waives all claims against Danfoss in this regard.</p>",
+        "<h2>Data protection and marketing</h2>",
+        "<p>Personal Data provided in connection with the competition will be handled in accordance with current legislation and will thus be treated as confidential. Personal Data provided by participants will only be processed within the scope of the game and to propose you to subscribe to the Danfoss Newsletter. Personal Data will not be processed for other purposes without prior consent by the participants or shared with third parties.</p>",
+        "<p>Personal Data is collected, saved and stored on servers located either on the territory of European Union, or in countries approved as having adequate data protection laws, and either by Danfoss owned servers or servers hosted by authorized service provider bound by agreement with Danfoss. Data are accessible only by relevant Danfoss authorized employees.</p>",
+        "<p>The competition is held by:</p>",
+        "<p>Danfoss Commercial Compressors<br>Cooling Segment<br>BP331 – ZI Reyrieux<br>FR- 01603 Trevoux<br>France</p>",
+        "<p>Any questions concerning the competition should be directed to Laure Durrbach at <a href='mailto:l_durrbach@danfoss.com'>l_durrbach@danfoss.com</a> </p>"
+    ]
 }
