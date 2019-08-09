@@ -1,30 +1,28 @@
-<div class="assess container {{ref_name}}" id="assessment_{{id}}">
-  <!-- {{selected_quiz | json}}, {{showPopup}} -->
+<div class="assess  {{ref_name}}" id="assessment_{{id}}">
   <div class="number_group" [ngClass]="{'blur' : panel == true}">
     <div class="top_panel">
-      <h4 class="font-thin" [innerHTML]="getContent(ref_arr.title)"></h4>
+      <p class="font-thin mb-0" [innerHTML]="getContent(ref_arr.title)"></p>
     </div>
     <img class="full-width" src="{{ref_arr.image}}">
     <div>
       <!-- Number -->
-      <div class="poitner" *ngFor="let q of ref_arr.quiz; let i = index" (click)="onclick(q, $event)" title="open"
-        data-toggle="popover" data-placement="right">
+      <div class="poitner" *ngFor="let q of ref_arr.quiz; let i = index" >
         <img class="pointer_img" src="assets/image/pointer.png" alt=""><br>
-        <button class="number" [ngClass]="{ 'blink': !q.completed, 'bg-green' : q.completed}"
+        <button class="number" [ngClass]="{ 'blink': !q.submitted, 'bg-green' : q.submitted}" (click)="onclick(q)"
           [ngStyle]="{'border-color': ref_arr.quiz[i].userchoice == undefined ? '#FF0000' : '#00FF00'}">
           {{q.id}}
         </button>
 
-        <div id="popup" class="popup" *ngIf="(selected_quiz == q && showPopup == true) || show_result == true">
-          <!-- <div class="close button" (click)="showPopup = false"><i class="fa fa-times" aria-hidden="true"></i></div> -->
-          <div class="question" [innerHTML]="getContent(q.question)" [ngClass]="{'correct' : q.userchoice != undefined && q.choices[q.userchoice].correct == true && show_result == true,
-                      'incorrect' : q.userchoice != undefined && q.choices[q.userchoice].correct != true && show_result == true
+        <div id="popup" class="popup" [@fallIn] *ngIf="(selected_quiz == q && q.showPopup == true) || show_result == true">
+          <div class="question" [innerHTML]="getContent(q.question)" [ngClass]="{
+                'correct' : q.userchoice != undefined && q.choices[q.userchoice].correct == true && show_result == true,
+                'incorrect' : q.userchoice != undefined && q.choices[q.userchoice].correct != true && show_result == true
           }">
           </div>
           <div class="answer">
 
             <div class="choice" *ngFor="let choice of q.choices; let i = index"
-              [ngClass]="{'disable' : q.completed == true}" (click)="q.completed != true ? q.userchoice = i : ''">
+              [ngClass]="{'disable' : ref_arr.completed == true}" (click)="choiceClick(q, i)">
               <div class="eval" *ngIf="q.userchoice === i && show_result == true"
                 [ngClass]="{'correct' : choice.correct == true}">
                 <img src="{{ choice.correct == true ? 'assets/image/tick.png' :  'assets/image/wrong.png'}}" alt="">
@@ -42,37 +40,39 @@
             </div>
           </div>
           <div class="footer">
-            <input type="button" class="btn small-outliner" *ngIf="q.completed != true"
-              [disabled]="q.userchoice == undefined" value="Submit" (click)="onSubmit(q);">
+            <div class="button btn small-outliner" *ngIf="q.userchoice != undefined && ref_arr.completed != true"
+              (click)="  onSubmit();">
+              Submit
+            </div>
           </div>
         </div>
       </div>
     </div>
     <!--     -->
-    <div class='next_panel text-center' *ngIf="ref_arr.completed"  >
+    <div class='next_panel text-center' *ngIf="ref_arr.completed">
       <!--*ngIf="nextEnable"-->
-      <input type="button" class="btn btn-primary rounded-pill next" value="Next" (click)="onNext()"> <br>
-      <button class="btn btn-light rounded-pill"
-        (click)="toggleAnswer()">{{show_result ? "Hide Answer" : "Show Answer"}}</button>
+      <button type="button" class="btn btn-primary btn-width rounded-pill next" (click)="onNext()">NEXT</button> <br>
+      <button class="btn btn-light rounded-pill btn-width btn-answer font-light"
+        (click)="toggleAnswer()">{{show_result ? "Hide answer" : "Show answer"}}</button>
     </div>
     <div class="bottom_bar">
       <div class="d-flex flex-row">
         <div class="d-flex flex-col">
           <div class="title">System</div>
-          <div class="content">Cold Room</div>
+          <div class="content">{{ref_name == 'mbp' ? 'Cold room' : 'Freezer room'}}</div>
         </div>
         <div class="d-flex flex-col">
-          <div class="score" *ngIf="ref_arr.completed">Your Score: <span class=''>{{ref_arr.score}}</span> out of
+          <div class="score" *ngIf="ref_arr.completed">Your Score: <span class='user-score'>{{ref_arr.score}}</span> out
+            of
             {{ref_arr.total}}</div>
         </div>
         <div class="d-flex flex-col">
           <div class="title">Refrigerant</div>
           <div class="content">{{ref_arr.name}}</div>
           <div class="icon"><img src="assets/image/refrigerant_Icon.png" alt=""></div>
-        </div>
-        <div class="d-flex flex-col">
-          <div class="title">Temprture</div>
-          <div class="content">5°C / 40°F</div>
+
+          <div class="title">Temperature</div>
+          <div class="content">{{ref_name == 'mbp' ? '5°C / 40°F' : '-18°C / 0°F'}}</div>
           <div class="icon"><img src="assets/image/temperature_icon.png" alt=""></div>
         </div>
       </div>
@@ -80,70 +80,124 @@
   </div>
 
 
-  <div class="dark_bg" *ngIf="panel==true">
-    <div class="panel ">
-      <div class="step text-center" *ngIf="step == 1">
-        <button class="btn btn-red rounded-pill" routerLink="/home/1">Next Challenge</button><br><br>
-        <button class="btn btn-outline-secondary rounded-pill" (click)="step = 2">No thanks</button>
+  <div class="dark_bg" *ngIf="panel==true" >
+    <div class="panel " [@fallIn]>
+
+      <div class="step_1 text-center" *ngIf="step == 1" [@fallIn]>
+        <button class="btn btn-red rounded-pill next-challenge" routerLink="/home/1">Next Challenge</button><br><br>
+        <button class="btn btn-outline-secondary rounded-pill nothanks" (click)="step = 2; getScore();">No
+          thanks</button>
       </div>
-      <div class="yourscore_panel  text-center" *ngIf="step == 2">
-        <h1 class="font-thin">Your Score</h1>
-        <div class="box border-box">
-          <div class="row">
-            <div class="col-sm-5">
-              <div class="row">
-                <div class="col-12 table_header">
-                  Cold room score
-                </div>
-              </div>
-              <div class="border-box margin-row">
 
-                <div class="row " *ngFor="let item of mbp">
-                  <div class="col-6 ">{{item.name}}</div>
-                  <div class="col-6 ">{{item.score}}</div>
+      <div class="yourscore_panel font-light text-center step_2" *ngIf="step == 2" [@fallIn]>
+        <h1 class="font-thin biggest-font">Your Score</h1>
+        <div class="border-box">
+          <div class="box ">
+            <div class="row">
+              <div class="col-sm-5">
+                <div class="row">
+                  <div class="col-12 table_header border-box">
+                    Cold room score
+                  </div>
+                </div>
+                <div class="margin-row">
+                  <div class="border-box ">
+
+                    <div class="row " *ngFor="let item of mbp">
+                      <div class="col-6 ">{{item.name}}</div>
+                      <div class="col-6 ">{{item.score}}</div>
+                    </div>
+                  </div>
+                  <div class="border-box  mt-2 ">
+                    <div class="row font-bold ">
+                      <div class="col-6 "><b>Total</b></div>
+                      <div class="col-6 "><b>{{mbp_score}}</b></div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="row mt-2 border">
-                <div class="col-6 "><b>Total</b></div>
-                <div class="col-6 "><b></b></div>
+
+              <div class="col-sm-2"></div>
+              <div class="col-sm-5">
+                <div class="row">
+                  <div class="col-12 table_header border-box">
+                    Freezer room score
+                  </div>
+                </div>
+                <div class="margin-row">
+                  <div class="border-box ">
+
+                    <div class="row " *ngFor="let item of lbp">
+                      <div class="col-6 ">{{item.name}}</div>
+                      <div class="col-6 ">{{item.score}}</div>
+                    </div>
+                    <div class="row " *ngFor="let item of lbp">
+                      <div class="col-6 ">&nbsp;</div>
+                      <div class="col-6 ">&nbsp;</div>
+                    </div>
+                  </div>
+                  <div class="border-box  mt-2 ">
+                    <div class="row font-bold ">
+                      <div class="col-6 "><b>Total</b></div>
+                      <div class="col-6 "><b>{{lbp_score}}</b></div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-
-            <div class="col-sm-2"></div>
-            <div class="col-sm-5">
-              <div class="row">
-                <div class="col-12 table_header">
-                  Freezer room score
-                </div>
-              </div>
-              <div class="border-box margin-row">
-                <div class="row" *ngFor="let item of lbp">
-                  <div class="col-6">{{item.name}}</div>
-                  <div class="col-6">{{item.score}}</div>
-                </div>
-                <div class="row" *ngFor="let item of lbp">
-                  <div class="col-6">&nbsp;</div>
-                  <div class="col-6">&nbsp;</div>
-                </div>
-              </div>
-              <div class="row mt-2 border">
-                  <div class="col-6 "><b>Total</b></div>
-                  <div class="col-6 "><b></b></div>
-              </div>
-            </div>
+            <p class="mt-4 font-small"><b>Total in all <span class='big_header'>{{totalScore}}</span></b> out of
+              {{total}}
+            </p>
+            <p class="mt-3 font-small">Great Job! would you like to continue?</p>
+            <a href="{{service.baseUrl}}"
+              class="btn btn-red rounded-pill mb-3 playagain font-light">Play again</a><br>
+            <!--<button routerLink="/wall" class="btn btn-red rounded-pill font-14 font-light mb-3">Send my result to Wall
+              of
+              Fame</button>-->
           </div>
-
-          <p class="mt-5"><b>Total in all <span class=''>{{totalScore}}</span></b>out of {{total}}</p>
-          <p class="mt-3">Great Job! would you like to continue?</p>
-          <a href="/" class="btn btn-red rounded-pill">Play Again</a><br><br>
-          <button routerLink="/wall" class="btn btn-red rounded-pill">Send my result to Wall of Fame</button>
         </div>
 
+        <h1 class="font-thin biggest-font mt-5">Send my result to Wall of fame</h1>
+        <div class="border-box">
+          <div class="m-4 font-small font-normal">
+            <form class="nameForm" [formGroup]="angForm" novalidate (ngSubmit)="onFormSubmit()">
+              <div class="single-row">
+                <div class="lable">
+                    <label for="username" class="col-form-label">Nickname</label>
+                </div>
+                <div class="field">
+                    <input type="text" class="form-control" placeholder="your name" formControlName="username">
+                    <div *ngIf="submitted && angForm.controls['username'].invalid" class="error">
+                      <div *ngIf="angForm.controls['username'].errors.required">Name is required.</div>
+                    </div>
+                </div>
+              </div>
+              <div class="single-row">
+                <div class="lable">
+                    <label for="country" class="col-form-label">Country</label>
+                </div>
+                <div class="field">
+                  <select type="number" class="form-control custom-select-mb" formControlName="country">
+                    <option value='0'>Select Country</option>
+                    <option *ngFor="let country of countries" value='{{country.code}}'>{{country.name}}</option>
+                  </select>
+                </div>
+              </div>
+              <div class="single-row">
+                <div class="lable"></div>
+                <div class="field">
+                  <input type="submit" [disabled]="!(angForm.valid && angForm.controls['country'].value != 0)" value="Submit" 
+                  class="btn btn-red rounded-pill playagain font-light">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      
       </div>
     </div>
+
+
+
+    <!-- <input type="button" class="btn next-button " routerLink="/form" value="Form"> -->
   </div>
-
-
-
-  <!-- <input type="button" class="btn next-button " routerLink="/form" value="Form"> -->
-</div>

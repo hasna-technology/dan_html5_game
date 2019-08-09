@@ -1,21 +1,36 @@
 {
-    "welcome" : "Da Welcome to CoolGame III",
-    "txt1" : "<p>Da You need a new refrigerant in the R404A system, but what are the consequences?</p><p>Test your knowledge and skills and get a chance to win a cool prize!</p>",
-    "txt2" : "Da Remember the system was built for R404A, so are the compressor, the TXV, the condenser OK, and what about the performance?",
-    "txt3" : "Da Get Start",
-    "txt4" : "Da 1. Select your system",
-    "txt5" : "Da 2. Select your new refrigerant",
-    "txt6" : "Da 3. Estimate the consequences",
-    "txt7" : "Da <p>We know that a different refrigerant will behave differently, but to obtain same function and temperatures, what will you need to change in the setup and components?</p>",
-    "quiz1_q" : "Da 1) Is the LIQUID line:",
-   
-    "quiz2_q" :"Da 2) Is the Solenoid valve:",
-    "quiz3_q" :"Da 3) Is the expansion valve:",
-    "quiz4_q" : "Da 4) Is the evaporator:",
-    "quiz5_q" :"Da 5) Is the compressor:",
-    "quiz6_q" : "Da 6) Is the condenser:",
-    "ch_1_1"  : "Da Too big",
-    "ch_1_2"  : "Da Too small",
-    "ch_1_3"  : "Da ok"
+    "welcome" : "Da Welcome to ",
+    "game": "CoolGame III",
+  "your_task": "Your Task",
+  "next": "Next",
+  "txt1": "<b class='font-bold'>Replace R404A </b>in your system and determine the consequences.<br>Challenge your knowledge and skill for the chance to win a prize!",
+  "instr": "Click here to read the disclaimer and rules.",
+
+  "txt4": "1. Select system",
+  "txt5": "2. Select new refrigerant",
+  "txt6": "3. Determine the consequences",
+  "txt7": "<p>To obtain the same function and temperatures, how will you change the setup and components?</p>",
+
+  "title_1": "You’ve switched from R404A to <span class='font-semibold text-ref'>R448A</span>. How will this affect the system?",
+  "title_2": "You’ve switched from R404A to <span class='font-semibold text-ref'>R449A</span>. How will this affect the system?",
+  "title_3": "You’ve switched from R404A to <span class='font-semibold text-ref'>R450A</span>. How will this affect the system?",
+  "title_4": "You’ve switched from R404A to <span class='font-semibold text-ref'>R452A</span>. How will this affect the system?",
+  "title_5": "You’ve switched from R404A to <span class='font-semibold text-ref'>R513A</span>. How will this affect the system?",
+  "title_6": "You’ve switched from R404A to <span class='font-semibold text-ref'>R449A</span>. How will this affect the system?",
+  "title_7": "You’ve switched from R404A to <span class='font-semibold text-ref'>R452A</span>. How will this affect the system?",
+
+  "quiz1_q": "1) Is the liquid line",
+  "quiz2_q": "2) Is the solenoid valve",
+  "quiz3_q": "3) Is the expansion valve capacity",
+  "quiz4_q": "4) Is the evaporator",
+  "quiz5_q": "5) What about the superheat",
+  "quiz6_q": "6) Is the compressor",
+  "quiz7_q": "7) Is the condenser",
+  "ch_0": " OK",
+  "ch_1": " Too big",
+  "ch_2": " Too small",
+  "ch_3": " Must be adjusted",
+  "ch_4": " New valve needed"
+
 
 }

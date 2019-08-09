@@ -1,0 +1,80 @@
+@import "../variable";
+.red_panel{
+    background-color: #D4000E;
+    color:#fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.white_panel{
+    color: #333;
+    background-color:#fff;
+}
+
+table.c-table {
+    margin: 0 auto;
+}
+
+
+.notes{
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.next_panel {
+    padding: 2rem;
+    justify-content: space-evenly;
+}
+
+.small_text{
+    font-size: 14px;
+    font-weight: normal;
+    padding-top: 10px;
+}
+
+.text-black{
+    color:#000;
+}
+
+.border-rounded {
+    border: 2px solid;
+    border-radius: 10px 10px 0 0;
+    display: inline-block;
+}
+.btn-width{
+    min-width: 100px;
+}
+
+.btn-width1{
+    min-width: 125px;
+}
+a.icon {
+    margin: 5px 5px;
+}
+
+a.icon img {
+    width: 30px;
+}
+
+
+tbody {
+    display:block;
+    height:222px;
+    overflow:auto;
+}
+thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
+thead {
+    width: calc( 100% - 2em )
+}
+table {
+    width:500px;
+}
+.back_btn{
+    cursor: pointer;
+    margin-top: 5px;
+}

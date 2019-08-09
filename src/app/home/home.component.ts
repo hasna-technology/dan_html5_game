@@ -1,27 +1,16 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import anime from 'animejs';
 import { GeneralService } from '../service/general.service';
-import { moveIn, fallIn } from '../router.animations';
+import { moveIn, fallIn, fallInLeft } from '../router.animations';
 import { Router, ActivatedRoute } from '@angular/router';
-import { trigger, transition, style, animate } from '@angular/animations';
 import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
-  animations: [
-    trigger('animation', [
-      transition(':enter', [
-        style({ opacity: 0 }),
-        animate('0.5s', style({ opacity: 1 })),
-      ]),
-      transition(':leave', [
-        animate('0.5s', style({ opacity: 0 })),
-      ])
-    ]),
-  ]
-  
+  styleUrls: ['./home.component.scss'],
+  animations: [moveIn(), fallIn(), fallInLeft()],
+  host: { '[@moveIn]': '' }
   //[moveIn(), fallIn()],
   //host: { '[@moveIn]': '' }
 })
@@ -29,31 +18,32 @@ export class HomeComponent implements OnInit {
   constructor(public service: GeneralService, private router: Router,  private route: ActivatedRoute) { }
   private routeSub: Subscription;
   id;
-  step_2 = false;
-  step_3 = false;
-  step_4a = false;
-  step_4b = false;
-  step_5 = false;
+  step = "step_1";
+  
   selected_ref;
   selectedLang;
   panel = false;
-  mbp_ref = this.service.get_mbp();
-  lbp_ref = this.service.get_lbp();
+  mbp_ref:any = this.service.get_mbp();
+  lbp_ref:any = this.service.get_lbp();
 
   show_list = false;
 
   ngOnInit() {
     this.routeSub = this.route.params.subscribe(params => {
       this.id = params['id'];
-      console.log(this.id)
+      //console.log(this.id)
       if(this.id == "1"){
-        this.step_2 = true;
+        this.step = 'step_2';
         //this.panel = true;
         console.log(params)
         this.goto('step_3');
       }
     });
-
+    let lang = localStorage.getItem('lang');
+    if(lang != undefined)
+    {
+      this.setContent(lang);
+    }
   }
   ngAfterViewInit() {
     anime({
@@ -101,6 +91,7 @@ export class HomeComponent implements OnInit {
   ]
 
   setContent(lang) {
+    localStorage.setItem('lang', lang);
     this.selectedLang = lang
     this.service.getJson(lang);
     this.show_list = false
@@ -114,7 +105,7 @@ export class HomeComponent implements OnInit {
   
 
   goto(step) {
-    switch (step) {
+    /*switch (step) {
       case 'step_2':
         this.panel = false;
         this.step_2 = true;
@@ -146,11 +137,24 @@ export class HomeComponent implements OnInit {
         this.step_4b = false;
         this.step_5 = true;
         break;
-    }
+    }*/
+  if(step == 'step_2')
+      this.panel = false;
+  else
+    this.panel = true;
+    
+    this.step = step;
+
   }
 
   ref_click(ref){
     let group_name = ref.group
     this.router.navigateByUrl('/assessment/'+group_name + "/" + ref.id);
+  }
+  getCompletedCount(_ref){
+    if(_ref == 'mbp')
+      return this.mbp_ref.filter((x, i) => { return x.completed == true; }).length;
+    if(_ref == 'lbp')
+      return this.lbp_ref.filter((x, i) => { return x.completed == true; }).length;
   }
 }
