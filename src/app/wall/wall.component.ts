@@ -23,7 +23,7 @@ export class WallComponent implements OnInit {
   constructor(private fb: FormBuilder, public service:GeneralService) {
     this.createForm();
     this.score = this.service.totalScore;
-    console.log(this.service.totalScore);
+    //console.log(this.service.totalScore);
   }
   ngOnInit() {
     this.wall.push({

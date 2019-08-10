@@ -2,14 +2,14 @@
   <div class="red_panel ">
 
     <div class="step text-center" *ngIf="step == 1" [@fallIn]>
-      <h2 class="biggest-text font-thin">Wall of Fame</h2>
+      <h2 class="biggest-text font-thin">{{service._content['wall']}}</h2>
       <div class="border-rounded m-3">
         <table class="c-table text-left">
           <thead>
             <tr>
-              <th width="36%">Nickname</th>
-              <th width="36%">Country/Region</th>
-              <th>Score</th>
+              <th width="36%">{{service._content['nick_name']}}</th>
+              <th width="36%">{{service._content['region']}}</th>
+              <th>{{service._content['score']}}</th>
             </tr>
           </thead>
           <tbody class="white_panel">
@@ -22,11 +22,11 @@
         </table>
       </div>
       <br>
-      <p class="font-light">Do you want to get a chance to win a refrigerant expert T-shirt?</p>
-      <p class="font-thin big_header">Sign up below to enter</p>
+      <p class="font-light">{{service._content['winning_price']}}</p>
+      <p class="font-thin big_header">{{service._content['signup']}}</p>
 
-      <button (click)="step = 2" class="btn btn-primary rounded-pill btn-width1">I want to Win!</button> <br><br>
-      <button (click)="step = 3" class="btn btn-outline-light rounded-pill btn-width1">No thanks </button>
+      <button (click)="step = 2" class="btn btn-primary rounded-pill btn-width1">{{service._content['want_win']}}</button> <br><br>
+      <button (click)="step = 3" class="btn btn-outline-light rounded-pill btn-width1">{{service._content['no_thanks']}}</button>
     </div>
 
     <div class="step d-flex" *ngIf="step == 2" [@fallIn]>
@@ -34,29 +34,27 @@
         <img src="assets/image/white_back.png" alt="">
       </div>
       <div class="ml-3">
-        <p>Do you have what it takes to compete with refrigeration colleagues from around the world ?<br>Sign up for the
-          international competition and you could win our refrigerant expert T-shirt !</p>
-        <h2 class="font-normal">Please register below:</h2>
-        <p class="notes font-thin">Danfoss complies with the European GDPR regulations and thereby guarantee to keep any
-          information provided here safe from abuse</p>
+        <p>{{service._content['arround_world']}}<br>{{service._content['world_competition']}}</p>
+        <h2 class="font-normal">{{service._content['register']}}</h2>
+        <p class="notes font-thin">{{service._content['protect_information']}}</p>
         <form [formGroup]="angForm" novalidate (ngSubmit)="onSubmit()" class="signup_form ">
           <div class="form-group row">
-            <label for="username" class="col-sm-3 col-form-label">Your nick name</label>
+            <label for="username" class="col-sm-3 col-form-label">{{service._content['your_nick_name']}}</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" placeholder="your name" formControlName="username">
+              <input type="text" class="form-control" placeholder="{{service._content['name']}}" formControlName="username">
               <div *ngIf="submitted && angForm.controls['username'].invalid" class="error">
                 <div *ngIf="angForm.controls['username'].errors.required">Name is required.</div>
               </div>
             </div>  
           </div>
           <div class="form-group row">
-            <label for="score" class="col-sm-3 col-form-label">Your score</label>
+            <label for="score" class="col-sm-3 col-form-label">{{service._content['your_Score']}}</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" placeholder="your score" formControlName="score">
+              <input type="text" class="form-control" placeholder="{{service._content['your_score']}}" formControlName="score">
             </div>
           </div>
           <div class="form-group row">
-            <label for="country" class="col-sm-3 col-form-label">Your country (region)</label>
+            <label for="country" class="col-sm-3 col-form-label">{{service._content['your_country(region)']}}</label>
             <div class="col-sm-6">
               <select type="number" class="form-control custom-select-mb" formControlName="country">
                 <option value='0'>Select Country</option>
@@ -70,9 +68,9 @@
             </div>
           </div>
           <div class="form-group row">
-            <label for="email" class="col-sm-3 col-form-label">*Your email address</label>
+            <label for="email" class="col-sm-3 col-form-label">{{service._content['your_email_address']}}</label>
             <div class="col-sm-6">
-              <input type="email" class="form-control" placeholder="your email" formControlName="email"
+              <input type="email" class="form-control" placeholder="{{service._content['your_email']}}" formControlName="email"
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="email" name="email">
               <div
                 *ngIf="angForm.controls['email'].invalid && (angForm.controls['email'].dirty || angForm.controls['email'].touched || angForm.controls['email'].untouched )"
@@ -86,7 +84,7 @@
             <div class="col-sm-3"></div>
             <div class="col-sm-6">
               <button type="submit" [disabled]="!(angForm.valid && angForm.controls['country'].value != 0)"
-                value="Send message" class="btn btn-primary">Sign up</button>
+                value="Send message" class="btn btn-primary">{{service._content['sign_up']}}</button>
             </div>
           </div>
         </form>
@@ -101,7 +99,7 @@
       <br>
       <br>
       <h2 class="bigger-text font-light">
-        Thanks for playing CoolGame III<br>
+        {{service._content['Thanks_for_play']}}<br>
         <span *ngIf="signup == true"> & Signing up for the competition</span>
       </h2>
       <div class="d-flex next_panel">
@@ -110,16 +108,16 @@
             <img src="assets/image/invite.png" alt="">
           </div>
           <a href='https://www.facebook.com/sharer/sharer.php?u=danfoss.com'
-            class="btn btn-primary btn-width rounded-pill mt-3">Invite</a>
-          <p class=" small_text">Invite a friend to play</p>
+            class="btn btn-primary btn-width rounded-pill mt-3">{{service._content['invite']}}</a>
+          <p class=" small_text">{{service._content['invite_friend']}}</p>
         </div>
 
         <div class="text-center">
           <div class="img mt-3">
             <img src="assets/image/tools.png" alt="">
           </div>
-          <a href='http://refrigerantweek.danfoss.com' class="btn btn-primary btn-width rounded-pill mt-3">Tools</a>
-          <p class=" small_text">Access our free tools</p>
+          <a href='http://refrigerantweek.danfoss.com' class="btn btn-primary btn-width rounded-pill mt-3">{{service._content['tools']}}</a>
+          <p class=" small_text">{{service._content['free_tool']}}</p>
         </div>
 
         <div class="text-center">
@@ -127,12 +125,12 @@
             <img src="assets/image/elesson.png" alt="">
           </div>
           <a href='https://www.danfoss.com/en/service-and-support/learning/'
-            class="btn btn-primary rounded-pill mt-3 btn-width">e-Lesson</a>
-          <p class=" small_text">Take some free e-Lessons</p>
+            class="btn btn-primary rounded-pill mt-3 btn-width">{{service._content['e-lesson']}}</a>
+          <p class=" small_text">{{service._content['free_lesson']}}</p>
         </div>
       </div>
       <div class="text-center">
-        <p>Get competition updates - follow Danfoss on social media</p>
+        <p>{{service._content['social_media']}}</p>
         <div class="mt-3">
           <!-- <a href="" class="icon"><img src="assets/icon_fb.png" alt=""></a> -->
           <a href="https://www.instagram.com/DanfossCool" target="_blank" class="icon"><img
@@ -147,7 +145,7 @@
         </div>
       </div>
       <div class="text-center m-5">
-        <a href="{{service.baseUrl}}" class="btn btn-outline-light rounded-pill btn-width">Play again</a>
+        <a href="{{service.baseUrl}}" class="btn btn-outline-light rounded-pill btn-width">{{service._content['play_again']}}</a>
       </div>
     </div>
 

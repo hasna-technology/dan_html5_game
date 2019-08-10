@@ -35,8 +35,10 @@ export class HomeComponent implements OnInit {
       if(this.id == "1"){
         this.step = 'step_2';
         //this.panel = true;
-        console.log(params)
+  
         this.goto('step_3');
+        console.log(this.panel)
+        console.log(this.step)
       }
     });
     let lang = localStorage.getItem('lang');
@@ -71,6 +73,10 @@ export class HomeComponent implements OnInit {
     {
       name: 'English',
       code: 'en'
+    },
+    {
+      name: 'Branzilian Portugese',
+      code: 'br'
     },
     {
       name: 'French',

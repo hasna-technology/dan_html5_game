@@ -28,10 +28,10 @@ export class GeneralService {
     let _jsonURL = 'assets/content/' + lang +'.json';
     this.http.get(_jsonURL).subscribe(data => {
       this._content = data;
-      /*
+      
       for(let item in this._content){
         this._content[item] = "test";
-      }*/
+      }
      });
   }
 

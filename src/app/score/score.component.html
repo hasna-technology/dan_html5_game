@@ -1,14 +1,14 @@
 <div class="container mt-5">
-  <h2>Your Score:</h2>
+  <h2>{{service._content['your_score']}}:</h2>
   <br>
   <div class="row">
     <div class="col-sm-6">
-      <h4>ColdRoom score:</h4>
+      <h4>{{service._content['cold_score']}}</h4>
       <table class="c-table">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Score</th>
+            <th>{{service._content['name']}}</th>
+            <th>{{service._content['score']}}</th>
           </tr>
         </thead>
         <tbody>
@@ -17,19 +17,19 @@
             <td class="text-right">{{item.score}}</td>
           </tr>
           <tr>
-            <td><b>Total</b></td>
+            <td><b>{{service._content['total']}}</b></td>
             <td class="text-right">{{mbp_score}}</td>
           </tr>
         </tbody>
       </table>
     </div>
     <div class="col-sm-6">
-      <h4>Freezer score:</h4>
+      <h4>{{service._content['freezer_score']}}</h4>
       <table class="c-table">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Score</th>
+            <th>{{service._content['name']}}</th>
+            <th>{{service._content['score']}}</th>
           </tr>
         </thead>
         <tbody>
@@ -38,7 +38,7 @@
             <td class="text-right">{{item.score}}</td>
           </tr>
           <tr>
-            <td><b>Total</b></td>
+            <td><b>{{service._content['total']}}</b></td>
             <td class="text-right">{{lbp_score}}</td>
           </tr>
         </tbody>
@@ -46,8 +46,8 @@
     </div>
   </div>
   <br>
-  <h5>Total in all	{{getScore()}} out of 7200</h5>
-  <p>Great job! Would you like to continue? </p>
-  <a href="/danfoss_html5_game/" class="btn btn-primary button" >Play again</a> &nbsp;
-  <a routerLink="/wall"  class="btn btn-primary button" >Send my result to Wall of Fame</a>
+  <h5>{{service._content['total_in_all']}} {{getScore()}} {{service._content['out']}} 7200 </h5>
+  <p>{{service._content['wish']}}</p>
+  <a href="/danfoss_html5_game/" class="btn btn-primary button" >{{service._content['play_again']}} </a> &nbsp;
+  <a routerLink="/wall"  class="btn btn-primary button" >{{service._content['send_result']}}</a>
 </div>
