@@ -10,6 +10,7 @@ import { InformationModuleModule } from '../information-module/information-modul
 export class GeneralService {
   
  
+  mode = "desktop";
 
   _content = {};
   totalScore: any;
