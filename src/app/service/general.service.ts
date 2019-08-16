@@ -20,7 +20,8 @@ export class GeneralService {
   //baseUrl = window.location.origin;
   baseUrl = "https://hasna-technology.github.io/danfoss_html5_game/";
   constructor(private http:HttpClient) { 
-    this.getJson('en');
+    let lang = localStorage.getItem('lang') == undefined ? 'en' : localStorage.getItem('lang');
+    this.getJson(lang);
     //console.log(window.location)
   }
 
@@ -28,10 +29,10 @@ export class GeneralService {
     let _jsonURL = 'assets/content/' + lang +'.json';
     this.http.get(_jsonURL).subscribe(data => {
       this._content = data;
-      
+      /*
       for(let item in this._content){
         this._content[item] = "test";
-      }
+      }*/
      });
   }
 
@@ -302,6 +303,27 @@ export class GeneralService {
     return this.countries.filter(x=>x.code == code)[0].name;
   }
 
+  resetGame(){
+    for (var i = 0; i < this.mbp_ref.length; i++) {
+        this.mbp_ref[i]['score'] = 0;
+        this.mbp_ref[i]['submitted'] = false;
+        this.mbp_ref[i]['completed'] = false;
+        for (var j = 0; j < this.mbp_ref[i].quiz.length; j++) {
+          this.mbp_ref[i].quiz[j]['submitted'] = false;
+          this.mbp_ref[i].quiz[j]['userchoice'] = undefined;
+        }
+    }
+
+    for (var i = 0; i < this.lbp_ref.length; i++) {
+      this.lbp_ref[i]['score'] = 0;
+      this.lbp_ref[i]['submitted'] = false;
+      this.mbp_ref[i]['completed'] = false;
+      for (var j = 0; j < this.lbp_ref[i].quiz.length; j++) {
+        this.lbp_ref[i].quiz[j]['submitted'] = false;
+        this.lbp_ref[i].quiz[j]['userchoice'] = undefined;
+      }
+    }
+  }
   mbp_ref = [
     {
       id:0,

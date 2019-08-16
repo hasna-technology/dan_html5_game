@@ -25,8 +25,10 @@
       <p class="font-light">{{service._content['winning_price']}}</p>
       <p class="font-thin big_header">{{service._content['signup']}}</p>
 
-      <button (click)="step = 2" class="btn btn-primary rounded-pill btn-width1">{{service._content['want_win']}}</button> <br><br>
-      <button (click)="step = 3" class="btn btn-outline-light rounded-pill btn-width1">{{service._content['no_thanks']}}</button>
+      <button (click)="step = 2"
+        class="btn btn-primary rounded-pill btn-width1">{{service._content['want_win']}}</button> <br><br>
+      <button (click)="step = 3"
+        class="btn btn-outline-light rounded-pill btn-width1">{{service._content['no_thanks']}}</button>
     </div>
 
     <div class="step d-flex" *ngIf="step == 2" [@fallIn]>
@@ -41,16 +43,18 @@
           <div class="form-group row">
             <label for="username" class="col-sm-3 col-form-label">{{service._content['your_nick_name']}}</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" placeholder="{{service._content['name']}}" formControlName="username">
+              <input type="text" class="form-control" placeholder="{{service._content['name']}}"
+                formControlName="username">
               <div *ngIf="submitted && angForm.controls['username'].invalid" class="error">
                 <div *ngIf="angForm.controls['username'].errors.required">Name is required.</div>
               </div>
-            </div>  
+            </div>
           </div>
           <div class="form-group row">
             <label for="score" class="col-sm-3 col-form-label">{{service._content['your_Score']}}</label>
             <div class="col-sm-6">
-              <input type="text" class="form-control" placeholder="{{service._content['your_score']}}" formControlName="score">
+              <input type="text" class="form-control" placeholder="{{service._content['your_score']}}"
+                formControlName="score">
             </div>
           </div>
           <div class="form-group row">
@@ -70,13 +74,21 @@
           <div class="form-group row">
             <label for="email" class="col-sm-3 col-form-label">{{service._content['your_email_address']}}</label>
             <div class="col-sm-6">
-              <input type="email" class="form-control" placeholder="{{service._content['your_email']}}" formControlName="email"
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="email" name="email">
+              <input type="email" class="form-control" placeholder="{{service._content['your_email']}}"
+                formControlName="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="email" name="email">
               <div
                 *ngIf="angForm.controls['email'].invalid && (angForm.controls['email'].dirty || angForm.controls['email'].touched || angForm.controls['email'].untouched )"
                 class="error">
                 <div *ngIf="submitted && angForm.controls['email'].errors.required">Email is required.</div>
                 <div *ngIf="submitted && angForm.controls['email'].errors?.pattern">Invalid email.</div>
+              </div>
+              <div class="notes">
+                <p>{{service._content['email_policy1']}}
+                  <span class="button a_href" (click)="openRules()">{{service._content['here']}}</span>.
+                  <span [innerHtml]="service._content['email_policy2']"></span>
+                  <a class='a_href' href='https://www.danfoss.com/en/terms/privacy/' target='_blank'>{{service._content['here']}}</a>. 
+                  <span [innerHtml]="service._content['email_policy3']"></span>
+                </p>
               </div>
             </div>
           </div>
@@ -116,7 +128,8 @@
           <div class="img mt-3">
             <img src="assets/image/tools.png" alt="">
           </div>
-          <a href='http://refrigerantweek.danfoss.com' class="btn btn-primary btn-width rounded-pill mt-3">{{service._content['tools']}}</a>
+          <a href='http://refrigerantweek.danfoss.com'
+            class="btn btn-primary btn-width rounded-pill mt-3">{{service._content['tools']}}</a>
           <p class=" small_text">{{service._content['free_tool']}}</p>
         </div>
 
@@ -145,10 +158,35 @@
         </div>
       </div>
       <div class="text-center m-5">
-        <a href="{{service.baseUrl}}" class="btn btn-outline-light rounded-pill btn-width">{{service._content['play_again']}}</a>
+        <button (click)="playAgain()"
+          class="btn btn-outline-light rounded-pill btn-width">{{service._content['play_again']}}</button>
       </div>
     </div>
 
 
+
+
+
   </div>
+
+  <div class="dark_bg" *ngIf="panel == true" [@fallIn]>
+    <div class="panel">
+
+      <div [@fallIn]>
+        <div class="back" (click)="panel = false">
+          <img src="assets/image/back.svg" width="80" height="80" alt="">
+        </div>
+        <h2 class="title text-center">{{service._content['rules_title']}}</h2>
+
+        <div class="content text-left">
+          <div *ngFor="let item of service._content['rules']">
+            <div [innerHtml]="item"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
 </div>

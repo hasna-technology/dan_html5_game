@@ -1,36 +1,14 @@
-<p>
-  information works!
-</p>
 <div class="container">
-  <div class="col-md-12">
-    <h2>Wall of Fame</h2>
-
-    <table class="table table-bordered ">
-      <thead>
-        <tr>
-          <th>Username</th>
-          <th>Score</th>
-          <th>country</th>
-          <th>Email</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let f of fames">
-          <td>{{  f.username }}</td>
-          <td>{{ f.score }}</td>
-          <td>{{ f.country }}</td>
-          <td>{{ f.email }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <p>Submit your high score to our Wall of Fame and you could win a prize!
-    Sign up below to enter.
-  </p>
-  <div>
-    <button (click)="onClickMe()" class="button btn-primary"  >I want to win! </button>
-  </div> 
-  <div>
-    <button class="button btn-primary mt-3"   (click)="nothanks()" >No thanks.</button>
-  </div>
+  <table class="table table-bordered ">
+    <thead class="thead-dark">
+      <tr>
+        <th>Key</th>
+        <th>Text</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let key of objectKeys(data)">
+      <td>{{key}}</td>
+      <td [innerHTML]='data[key]'></td>
+    </tr>
+  </table>
 </div>

@@ -83,19 +83,19 @@ body {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   background: #E2E1E1;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #D21716; 
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 /* Handle on hover */

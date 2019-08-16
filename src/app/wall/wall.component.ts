@@ -20,7 +20,7 @@ export class WallComponent implements OnInit {
   signup = false;
   countries = this.service.countries;
  
-  constructor(private fb: FormBuilder, public service:GeneralService) {
+  constructor(private fb: FormBuilder, private router: Router, public service:GeneralService) {
     this.createForm();
     this.score = this.service.totalScore;
     //console.log(this.service.totalScore);
@@ -67,6 +67,15 @@ export class WallComponent implements OnInit {
 
     this.success = true;
 
+  }
+  panel = false;
+  openRules(){
+    this.panel = true;
+
+  }
+  playAgain(){
+    this.service.resetGame();
+    this.router.navigateByUrl('/home');
   }
   wall= [
     {

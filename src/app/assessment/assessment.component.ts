@@ -18,7 +18,7 @@ export class AssessmentComponent implements OnInit {
 
 
 
-  constructor(private fb: FormBuilder, private router: Router, private route: ActivatedRoute, private service: GeneralService, private changeDector: ChangeDetectorRef) { }
+  constructor(private fb: FormBuilder, private router: Router, private route: ActivatedRoute, public service: GeneralService, private changeDector: ChangeDetectorRef) { }
 
   id;
   ref_arr;
@@ -36,14 +36,14 @@ export class AssessmentComponent implements OnInit {
     this.createForm();
 
     this.route.params.subscribe(params => {
-      console.log(params) //log the entire params object
+      //console.log(params) //log the entire params object
 
       this.ref_name = params['ref'];
       this.id = params['id'];
       this.mbp = this.service.get_mbp();
       this.lbp = this.service.get_lbp();
       //this.ref_arr = this.service.get_mbp(this.id);
-      console.log(this.ref_name) //log the value of id
+      //console.log(this.ref_name) //log the value of id
       if (this.ref_name == "mbp") {
         this.ref_arr = this.service.get_mbp(this.id);
       } else {
@@ -60,7 +60,7 @@ export class AssessmentComponent implements OnInit {
     
     for (let i = 0; i < arr.quiz.length; i++) {
       const item = arr.quiz[i].choices;
-      console.log(item)
+      //console.log(item)
       for (let j = 0; j < item.length; j++) {
         const choice = item[j];
         if(choice.correct == true)
@@ -126,7 +126,7 @@ export class AssessmentComponent implements OnInit {
     {
       for (var i = 0; i < this.ref_arr.quiz.length; i++) {
         if (this.ref_arr.quiz[i].submitted != true) {
-          console.log(i, this.ref_arr.quiz[i].showPopup )
+          //console.log(i, this.ref_arr.quiz[i].showPopup )
           this.selected_quiz = this.ref_arr.quiz[i];
           this.selected_quiz.showPopup = true;
           break;
@@ -136,13 +136,16 @@ export class AssessmentComponent implements OnInit {
     
     
   }
-
+  playAgain(){
+    this.service.resetGame();
+    this.router.navigateByUrl('/home');
+  }
   onNext() {
 
     var completed_count = this.mbp.filter((x, i) => { return x.completed == true; }).length +
                           this.lbp.filter((x, i) => { return x.completed == true; }).length
     var total_count = this.mbp.length + this.lbp.length;
-    console.log(total_count, completed_count)
+    //console.log(total_count, completed_count)
     this.panel = true;
     if(total_count == completed_count){
       this.step = 2; 
@@ -169,7 +172,7 @@ export class AssessmentComponent implements OnInit {
 
   toggleAnswer() {
     this.show_result = !this.show_result;
-    console.log(this.show_result)
+    //console.log(this.show_result)
     this.hideAnswer();  
   }
 

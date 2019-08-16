@@ -29,6 +29,11 @@ export class HomeComponent implements OnInit {
   show_list = false;
 
   ngOnInit() {
+    let lang = localStorage.getItem('lang');
+    if(lang != undefined)
+    {
+      this.setContent(lang);
+    }
     this.routeSub = this.route.params.subscribe(params => {
       this.id = params['id'];
       //console.log(this.id)
@@ -41,11 +46,6 @@ export class HomeComponent implements OnInit {
         console.log(this.step)
       }
     });
-    let lang = localStorage.getItem('lang');
-    if(lang != undefined)
-    {
-      this.setContent(lang);
-    }
   }
   ngAfterViewInit() {
     anime({
