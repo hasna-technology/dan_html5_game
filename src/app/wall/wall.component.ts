@@ -40,6 +40,7 @@ export class WallComponent implements OnInit {
         score: this.service.totalScore
       })
       localStorage.setItem('wall', JSON.stringify(this.wall));
+      
     }
     this.sortBy('score');
   }
@@ -101,6 +102,7 @@ export class WallComponent implements OnInit {
       date: new Date()
     })
     localStorage.setItem('signIn', JSON.stringify(this.signIn));
+    //this.service.writeFile('signIn', JSON.stringify(this.signIn));
   }
 
 

@@ -15,7 +15,7 @@ export class InformationComponent implements OnInit {
   
   data;
   objectKeys = Object.keys;
-  lang = 'fr';
+  lang = 'es';
   ngOnInit() {
     let _jsonURL = 'assets/content/' + this.lang +'.json';
     this.http.get(_jsonURL).subscribe(data => {

@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+
+
 import { InformationModuleModule } from '../information-module/information-module.module';
 
 
@@ -8,6 +10,8 @@ import { InformationModuleModule } from '../information-module/information-modul
   providedIn: 'root'
 })
 export class GeneralService {
+
+ 
   
  
   mode = "desktop";
