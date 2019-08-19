@@ -130,7 +130,7 @@
           </div>
           <a href='http://refrigerantweek.danfoss.com'
             class="btn btn-primary btn-width rounded-pill mt-3">{{service._content['tools']}}</a>
-          <p class=" small_text">{{service._content['free_tool']}}</p>
+          <p class=" small_text"  [innerHtml]="service._content['free_tool']"></p>
         </div>
 
         <div class="text-center">
@@ -139,7 +139,7 @@
           </div>
           <a href='https://www.danfoss.com/en/service-and-support/learning/'
             class="btn btn-primary rounded-pill mt-3 btn-width">{{service._content['e-lesson']}}</a>
-          <p class=" small_text">{{service._content['free_lesson']}}</p>
+          <p class=" small_text" [innerHtml] = "service._content['free_lesson']"></p>
         </div>
       </div>
       <div class="text-center">
