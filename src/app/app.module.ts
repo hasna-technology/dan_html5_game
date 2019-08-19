@@ -15,6 +15,7 @@ import { ScoreComponent } from './score/score.component';
 import { WallComponent } from './wall/wall.component';
 import { ExitComponent } from './exit/exit.component';
 import { ImageSequenceComponent } from './comp/image-sequence/image-sequence.component';
+import { FilterPipe} from './service/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ImageSequenceComponent } from './comp/image-sequence/image-sequence.com
     WallComponent,
     ExitComponent,
     ImageSequenceComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
