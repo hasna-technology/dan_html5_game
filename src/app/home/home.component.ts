@@ -83,16 +83,20 @@ export class HomeComponent implements OnInit {
       code: 'fr'
     },
     {
-      name: 'Danish',
-      code: 'da'
-    },
-    {
       name: 'Spanish',
       code: 'es'
     },
     {
-      name: 'Chinese',
-      code: 'zh'
+      name:'Polish',
+      code:'pl'
+    },
+    {
+      name:'Ukrainian',
+      code:'uk'
+    },
+    {
+      name:'German',
+      code:'de'
     }
   ]
 
