@@ -75,7 +75,7 @@ export class HomeComponent implements OnInit {
       code: 'en'
     },
     {
-      name: 'Branzilian Portugese',
+      name: 'Brazilian Portuguese',
       code: 'br'
     },
     {

@@ -31,23 +31,38 @@ export class WallComponent implements OnInit {
 
     if(w != undefined){
       this.wall =  JSON.parse(w);
+      this.wall.forEach(function(element){
+        element.showResult = false;
+        element.currentItem = false;
+      })
     }
 
     if (this.service.user.username != "") {
       this.wall.push({
         name: this.service.user.username,
         country: this.service.getCoutry(this.service.user.country),
-        score: this.service.totalScore
+        score: this.service.totalScore,
+        showResult: true,
+        currentItem: true
       })
+      this.sortBy(this.wall, 'score');
       localStorage.setItem('wall', JSON.stringify(this.wall));
-      
+     
     }
-    this.sortBy('score');
+    this.sortBy(this.wall, 'score');
+    this.showTop(10);
+    console.log(this.wall);
   }
 
-  sortBy(field: string) {
+  showTop(len:number) {
+   for (let index = 0; index < len; index++) {
+     const element = this.wall[index];
+     element.showResult = true;
+   }
+  }
 
-    this.wall.sort((a: any, b: any) => {
+  sortBy(arr, field: string) {
+    arr.sort((a: any, b: any) => {
       if (a[field] > b[field]) {
         return -1;
       } else if (a[field] < b[field]) {
@@ -56,6 +71,7 @@ export class WallComponent implements OnInit {
         return 0;
       }
     });
+    return arr;
   }
   createForm() {
     this.angForm = this.fb.group({
@@ -119,52 +135,73 @@ export class WallComponent implements OnInit {
     {
       name: "Dr Cool",
       country: "Sachsen",
-      score: 8400
+      score: 8400,
+      showResult:false,
+      currentItem:false
+      
     },
     {
       name: "refKid",
       country: "Turkey",
-      score: 8400
+      score: 8400,
+      showResult:false,
+      currentItem:false
     },
     {
       name: "Grumpy76",
       country: "Hull",
-      score: 8200
+      score: 8200,
+      showResult:false,
+      currentItem:false
     },
     {
       name: "duh_Man",
       country: "Denmark",
-      score: 8200
+      score: 8200,
+      showResult:false,
+      currentItem:false
     },
     {
       name: "98xBummer",
       country: "France_Lille",
-      score: 8200
+      score: 8200,
+      showResult:false,
+      currentItem:false
     },
     {
       name: "Dr Cool",
       country: "Sachsen",
-      score: 8200
+      score: 8200,
+      showResult:false,
+      currentItem:false
     },
     {
       name: "refKid",
       country: "Turkey",
-      score: 8000
+      score: 8000,
+      showResult:false,
+      currentItem:false
     },
     {
       name: "Grumpy76",
       country: "Hull",
-      score: 8000
+      score: 8000,
+      showResult:false,
+      currentItem:false
     },
     {
       name: "duh_Man",
       country: "Denmark",
-      score: 8000
+      score: 8000,
+      showResult:false,
+      currentItem:false
     },
     {
       name: "98xBummer",
       country: "France_Lille",
-      score: 8000
+      score: 8000,
+      showResult:false,
+      currentItem:false
     }
   ];
 
