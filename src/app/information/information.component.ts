@@ -11,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class InformationComponent implements OnInit {
 
-  constructor(private general: GeneralService, private router: Router, private http:HttpClient) { }
+  constructor(public general: GeneralService, private router: Router, private http:HttpClient) { }
   
   data;
   objectKeys = Object.keys;

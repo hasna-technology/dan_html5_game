@@ -29,6 +29,7 @@ export class HomeComponent implements OnInit {
   show_list = false;
 
   ngOnInit() {
+    console.log("Mode = " + this.service.mode);
     let lang = localStorage.getItem('lang');
     if(lang != undefined)
     {

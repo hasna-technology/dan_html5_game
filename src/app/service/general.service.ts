@@ -11,10 +11,8 @@ import { InformationModuleModule } from '../information-module/information-modul
 })
 export class GeneralService {
 
- 
-  
- 
   mode = "desktop";
+  //mode = "web";
 
   _content = {};
   totalScore: any;

@@ -13,12 +13,18 @@
             </tr>
           </thead>
           <tbody class="white_panel">
+              <tr *ngIf="showLoader == true && service.mode == 'web'">
+                  <td colspan="3">
+                    <img src="assets/image/ajax-loader.gif" alt="">
+                  </td>
+                </tr>
             <ng-container *ngFor="let item of wall ; let i = index;">
-            <tr [ngClass]="{'currentItem' : item.currentItem}" *ngIf="item.showResult == true">
-              <td>{{i+1}}. {{item.name}}</td>
-              <td>{{item.country}}</td>
-              <td class="">{{item.score}}</td>
-            </tr>
+              
+              <tr [ngClass]="{'currentItem' : item.currentItem}" *ngIf="item.showResult == true">
+                <td>{{i+1}}. {{item.name}}</td>
+                <td>{{item.country}}</td>
+                <td class="">{{item.score}}</td>
+              </tr>
           </ng-container>
           </tbody>
         </table>
