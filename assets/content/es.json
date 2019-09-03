@@ -94,11 +94,24 @@
   "social_media":"Recibe actualizaciones de la competición - sigue a Danfoss en las redes sociales",
   
   "email_policy1" : "No te enviaremos nada ni utilizaremos tu email para nada más que este juego. Solo contactaremos contigo en caso de que sea el ganador! Quieres leer las reglas de la competición? Ve",
-  "email_policy2" : "Para ver nuestra política de privacidad completa puedes ir a",
+  "email_policy2" : "Para ver nuestra política de privacidad completa puedes ir ",
   "email_policy3" : "Inscribiéndote a Cool Game III aceptas y das tu consentimiento a las reglas del concurso y a la política de privacida de Danfoss.",
   "here" : "Aquí", 
   "choose_lang" : "Selecciona tu idioma",
   "rules_title" : "Reglas del concurso y condiciones",
+
+
+  "policy_link": "https://www.danfoss.com/es-es/terms/privacy/",
+  "facebook_link": "https://www.facebook.com/DanfossSouthEurope/",
+  "tools_link": "https://www.danfoss.com/es-es/about-danfoss/our-businesses/cooling/refrigerants-and-energy-efficiency/danfoss-refrigerant-transition-center/",
+  "learning_link": "https://www.danfoss.com/es-es/service-and-support/learning/",
+  
+  "instagram_link": "https://www.instagram.com/DanfossCool",
+  "linkedin_link": "https://www.linkedin.com/showcase/DanfossCool",
+  "twitter_link": "https://twitter.com/danfoss_iberia?lang=fr",
+  "youtube_link": "https://www.youtube.com/DanfossCool",
+  "signup_thanks": " & Registrarse en la competición",
+  
   "rules" : [
       "<h2>General Terms and Conditions for participants </h2>",
       "<p>The <b>#RefrigerantCoolgame</b> takes place over the period 20th August 2019 at 13:30 CET (Central European Time) to 30th September 2019 at 23:59 CET. </p>",

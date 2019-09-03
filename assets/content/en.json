@@ -100,6 +100,18 @@
     
     "choose_lang" : "Choose your language",
     "rules_title" : "Contest rules and Conditions",
+
+    "policy_link": "https://www.danfoss.com/en/terms/privacy/",
+    "facebook_link": "https://www.facebook.com/sharer/sharer.php?u=danfoss.com",
+    "tools_link": "http://refrigerantweek.danfoss.com",
+    "learning_link": "https://www.danfoss.com/en/service-and-support/learning/",
+    
+    "instagram_link": "https://www.instagram.com/DanfossCool",
+    "linkedin_link": "https://www.linkedin.com/showcase/DanfossCool",
+    "twitter_link": "https://www.twitter.com/DanfossCool",
+    "youtube_link": "https://www.youtube.com/DanfossCool",
+    "signup_thanks": " & Signing up for the competition",
+
     "rules" : [
         "<h2>General Terms and Conditions for participants </h2>",
         "<p>The <b>#RefrigerantCoolgame</b> takes place over the period 20th August 2019 at 13:30 CET (Central European Time) to 30th September 2019 at 23:59 CET. </p>",

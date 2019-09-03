@@ -55,7 +55,7 @@
   "freezer_room_score":"Score Congélateur",
   "total"     :"Total",
   "total_all" :"Total général ",
-  "out"       :"hors de",
+  "out"       :"sur",
   "wishes"    :"Bien joué ! Voulez vous continuer?",
   "play_again":"Rejouer",
  
@@ -71,7 +71,7 @@
   "wall"      :"Tableau des scores",
   "region"    :"Pays/région",
   "score"     :"Résultat",
-  "winning_price":"Do you want to get a chance to win a prize?",
+  "winning_price":"Voulez-vous gagner une chance de recevoir un cadeau?",
   "signup"    :"Inscrivez-vous ci-dessous pour participer",
   "want_win"  :"Je veux gagner!",
   "arround_world":"Voulez-vous rivaliser avec des frigoristes du monde entier?",
@@ -93,13 +93,25 @@
   "free_lesson":"Suivez des formations gratuites en ligne",
   "social_media":"Recevez les mises à jour de la compétition - suivez Danfoss sur les media sociaux",
   
-  "email_policy1" : "Nous ne vous enverrons rien et n'utiliserons votre email pour rien d'autre que ce jeu. C'est juste pour pouvoir vous contacter si vous gagnez ! Vous voulez lire toutes les règles du concours? Cliquez",
-  "email_policy2" : "Pour accéder à notre politique de confidentialité complète, cliquez",
+  "email_policy1" : "Nous ne vous enverrons rien et n'utiliserons votre email pour rien d'autre que ce jeu. C'est juste pour pouvoir vous contacter si vous gagné ! Vous voulez lire toutes les règles du concours? Cliquez ",
+  "email_policy2" : "Pour accéder à notre politique de confidentialité complète, cliquez ",
   "email_policy3" : "En participant au CoolGame III, vous acceptez les règles du concours et la politique de confidentialité de Danfoss.",
   "here" : "ici",
   
   "choose_lang" : "Sélectionnez la langue",
   "rules_title" : "Règlement du concours",
+
+  "policy_link": "https://www.danfoss.com/fr-fr/terms/privacy/",
+  "facebook_link": "https://www.facebook.com/sharer/sharer.php?u=danfoss.com",
+  "tools_link": "https://www.danfoss.com/fr-fr/about-danfoss/our-businesses/cooling/refrigerants-and-energy-efficiency/danfoss-refrigerant-transition-center/",
+  "learning_link": "https://www.danfoss.com/fr-fr/service-and-support/learning/",
+  
+  "instagram_link": "https://www.instagram.com/DanfossCool",
+  "linkedin_link": "https://www.linkedin.com/showcase/DanfossCool",
+  "twitter_link": "https://twitter.com/danfoss_france?lang=fr",
+  "youtube_link": "https://www.youtube.com/DanfossCool",
+  "signup_thanks": " et de vous inscrire à la compétition",
+  
   "rules" : [
       "<h2>General Terms and Conditions for participants </h2>",
       "<p>The <b>#RefrigerantCoolgame</b> takes place over the period 20th August 2019 at 13:30 CET (Central European Time) to 30th September 2019 at 23:59 CET. </p>",
