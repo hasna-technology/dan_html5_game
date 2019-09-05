@@ -2,8 +2,8 @@
     "welcome" : "Ласкаво просимо до",
     "game" : "CoolGame III",
     "your_task" : "Ваше завдання",
-    "next" : "наступний",
-    "txt1" : "<b class='font-bold'>Замініть R404</b>в вашій системі, та визначте наслідки.<br>Киньте собі виклик, щоб отримати шанс виграти приз!",
+    "next" : "Далі",
+    "txt1" : "<b class='font-bold'>Замініть R404</b> в вашій системі, та визначте наслідки.<br>Киньте собі виклик, щоб отримати шанс виграти приз!",
     "instr": "Натисніть тут, щоб прочитати правила користування, та умови конфіденціальності.",
     
     "txt4" : "1. Виберіть систему",
@@ -24,17 +24,29 @@
     "quiz3_q" : "3) Холодопродуктивність розширювального клапан",
     "quiz4_q" : "4) Випарник",
     "quiz5_q" : "5) А як з перегрівом?",
-    "quiz6_q" : "6) IКомпресор",
+    "quiz6_q" : "6) Компрессор",
     "quiz7_q" : "7) Конденсатор", 
     "ch_0"  : " Добре",
-    "ch_1"  : " Занадто великий",
-    "ch_2"  : " Занадто малий"  ,
+    "ch_1"  : " Занадто велика",
+    "ch_2"  : " Занадто мала"  ,
     "ch_3"  : " Потрібно відрегулювати",
     "ch_4"  : " Потрібні нові дюзи",
 
-    "play" : "PLAY",
+    "_comment": "changed for polish language",
+    
+    "ch_1a"  : " Занадто велика",
+    "ch_2a"  : " Занадто мала"  ,
+    "ch_3a"  : " Потрібно відрегулювати",
+    "ch_4a"  : " Потрібні нові дюзи",
+    
+    "ch_1b"  : " Занадто велика",
+    "ch_2b"  : " Занадто мала"  ,
+    "ch_3b"  : " Потрібно відрегулювати",
+    "ch_4b"  : " Потрібні нові дюзи",
 
-    "select_system": "Select the System",
+    "play" : "Грати",
+
+    "select_system": "Виберіть систему",
     "cold_room" : "Холодильна кімната 5°C/40°F",
     "freezer_room" : "Морозильна камера -18°C/0°F",
 
@@ -61,7 +73,7 @@
    
     "refrigerant_title":"СИСТЕМА",
     "test"      :"тест",
-    "refrigerant":"ХОЛОДА",
+    "refrigerant":"Холодоагент",
     "temp"      :"ТЕМПЕРАТУРА",
     "result"    :"Надіслати мої результати на стіну слави",
     "nick_name" :"Псевдонім",
@@ -86,20 +98,32 @@
    "sign_up"    :"Зареєструватися",
    "Thanks_for_play":"Дякуємо за гру CoolGame III",
     "invite"    :"Запросити",
-    "invite_friend":"Запросити друзів у гру? ",
+    "invite_friend":"Запроси друзів у гру ",
     "tools"     :"Інструменти",
-    "free_tool" :"Отримати доступ до наших <br> безкоштовних інструментів?</br>",
+    "free_tool" :"Отримай доступ до безкоштовних інструментів ",
     "e-lesson"  :"он-лайн курс",
-    "free_lesson":"Пройти безкоштовні он-лайн <br> уроки? посилання на </br>",
-    "social_media":"Отримайте оновлення про статус змагання -слідкуйте за Danfoss у соціальних медіа",
+    "free_lesson":"Пройти безкоштовно он-лайн уроки",
+    "social_media":"Отримайте оновлення про статус змагання - слідкуйте за Danfoss у соціальних медіа",
     
     "email_policy1" : "Ми не будемо надсилати вам нічого зайвого або використовувати вашу електронну скриньку для будь яких листів окрім змагання. Нам потрібна ваша електронна адреса на випадок, якщо ви виграєте приз, щоб зв'язатися. Бажаєте прочитати повні правила змагання? Просто перейдіть",
     "email_policy2" : "Щоб отримати повну політику конфіденційності, ви можете перейти",
-    "email_policy3" : "Підписуючись на цю класну гру III, ви приймаєте та погоджуєтесь із правилами змагань та Політикою конфіденційності Danfoss.",
-    "here" : "тут",
+    "email_policy3" : "Підписуючись на цю класну гру CoolGame III, ви приймаєте та погоджуєтесь із правилами змагань та Політикою конфіденційності Danfoss.",
+    "here" : " тут",
     
     "choose_lang" : "Вибрати мову",
     "rules_title" : "Правила та умови проведення конкурсу",
+    
+    "policy_link": "https://www.danfoss.com/en/terms/privacy/",
+    "facebook_link": "https://www.facebook.com/sharer/sharer.php?u=danfoss.com",
+    "tools_link": "http://refrigerantweek.danfoss.com",
+    "learning_link": "https://www.danfoss.com/en/service-and-support/learning/",
+    
+    "instagram_link": "https://www.instagram.com/DanfossCool",
+    "linkedin_link": "https://www.linkedin.com/showcase/DanfossCool",
+    "twitter_link": "https://www.twitter.com/DanfossCool",
+    "youtube_link": "https://www.youtube.com/DanfossCool",
+    "signup_thanks": " & Signing up for the competition",
+
     "rules" : [
         "<h2>General Terms and Conditions for participants </h2>",
         "<p>The <b>#RefrigerantCoolgame</b> takes place over the period 20th August 2019 at 13:30 CET (Central European Time) to 30th September 2019 at 23:59 CET. </p>",

@@ -62,8 +62,7 @@
           <div class="content">{{ref_name == 'mbp' ? service._content['cr'] : service._content['fr']}}</div>
         </div>
         <div class="d-flex flex-col">
-          <div class="score" *ngIf="ref_arr.completed">{{service._content['your_score']}}: <span class='user-score'>{{ref_arr.score}}</span> out
-            of
+          <div class="score" *ngIf="ref_arr.completed">{{service._content['your_score']}}: <span class='user-score'>{{ref_arr.score}}</span> {{service._content['out']}}
             {{ref_arr.total}}</div>
         </div>
         <div class="d-flex flex-col">

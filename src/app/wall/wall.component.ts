@@ -13,6 +13,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   host: { '[@moveIn]': '' }
 })
 export class WallComponent implements OnInit {
+  
+  //host = "https://localhost:44327/api/";
+  host = "http://coolgame.danfoss.com/api/";
+
   angForm;
   score = 0;
   submitted;
@@ -21,6 +25,7 @@ export class WallComponent implements OnInit {
   signup = false;
   countries = this.service.countries;
   showLoader = false;
+  
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -51,12 +56,15 @@ export class WallComponent implements OnInit {
     } else {
       this.showLoader = true;
       this.wall = [];
-      this.httpService.get('https://localhost:44327/api/wall').subscribe(
+      this.httpService.get(this.host +'wall').subscribe(
         data => {
           console.log(data);
           this.wall = this.convertWallData(data);
           this.showLoader = false;
           this.serviceaddCurrentUserData();
+        },
+        error => {
+          console.log(error);
         }
       );
 
@@ -67,7 +75,7 @@ export class WallComponent implements OnInit {
       if (this.service.user.username != "") {
         console.log("Send Post");
 
-        this.httpService.post('https://localhost:44327/api/wall', {
+        this.httpService.post(this.host +'wall', {
           name: this.service.user.username,
           country: this.service.getCoutry(this.service.user.country),
           score: this.service.totalScore,
@@ -147,7 +155,7 @@ export class WallComponent implements OnInit {
       this.signup = true;
       //alert("Thanks for signing up.");
 
-      this.httpService.post('https://localhost:44327/api/SignUp', {
+      this.httpService.post(this.host + 'SignUp', {
         name: this.angForm.controls['username'].value,
         score: this.angForm.controls['score'].value,
         countrycode: this.angForm.controls['country'].value,
@@ -212,66 +220,66 @@ export class WallComponent implements OnInit {
     {
       name: "refKid",
       country: "Turkey",
-      score: 8400,
+      score: 400,
       showResult: false,
       currentItem: false
     },
     {
       name: "Grumpy76",
       country: "Hull",
-      score: 8200,
+      score: 200,
       showResult: false,
       currentItem: false
     },
     {
       name: "duh_Man",
       country: "Denmark",
-      score: 8200,
+      score: 200,
       showResult: false,
       currentItem: false
     },
     {
       name: "98xBummer",
       country: "France_Lille",
-      score: 8200,
-      showResult: false,
-      currentItem: false
-    },
-    {
-      name: "Dr Cool",
-      country: "Sachsen",
-      score: 8200,
-      showResult: false,
-      currentItem: false
-    },
-    {
-      name: "refKid",
-      country: "Turkey",
-      score: 8000,
-      showResult: false,
-      currentItem: false
-    },
-    {
-      name: "Grumpy76",
-      country: "Hull",
-      score: 8000,
-      showResult: false,
-      currentItem: false
-    },
-    {
-      name: "duh_Man",
-      country: "Denmark",
-      score: 8000,
-      showResult: false,
-      currentItem: false
-    },
-    {
-      name: "98xBummer",
-      country: "France_Lille",
-      score: 8000,
+      score: 200,
       showResult: false,
       currentItem: false
     }
+    // {
+    //   name: "Dr Cool",
+    //   country: "Sachsen",
+    //   score: 8200,
+    //   showResult: false,
+    //   currentItem: false
+    // },
+    // {
+    //   name: "refKid",
+    //   country: "Turkey",
+    //   score: 8000,
+    //   showResult: false,
+    //   currentItem: false
+    // },
+    // {
+    //   name: "Grumpy76",
+    //   country: "Hull",
+    //   score: 8000,
+    //   showResult: false,
+    //   currentItem: false
+    // },
+    // {
+    //   name: "duh_Man",
+    //   country: "Denmark",
+    //   score: 8000,
+    //   showResult: false,
+    //   currentItem: false
+    // },
+    // {
+    //   name: "98xBummer",
+    //   country: "France_Lille",
+    //   score: 8000,
+    //   showResult: false,
+    //   currentItem: false
+    // }
   ];
 
 }

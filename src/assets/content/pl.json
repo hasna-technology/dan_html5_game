@@ -2,7 +2,7 @@
     "welcome" : "Witamy w",
     "game" : "CoolGame III",
     "your_task" : "Twoje zadanie",
-    "next" : "Kolejny",
+    "next" : "DALEJ",
     "txt1" : "<b class='font-bold'>Wymień R404A</b>w w układzie i określ konsekwencje.<br>Podejmij wyzwanie, sprawdź swoją wiedzę oraz umiejętności i wygraj nagrodę!",
     "instr": "Kliknij tutaj, aby zapoznać się z regulaminem.",
     
@@ -11,15 +11,15 @@
     "txt6" : "3. Określ konsekwencje",
     "txt7" : "<p>W jaki sposób zmienisz konfigurację i komponenty, aby uzyskać tą samą funkcjonalność i temperaturę?</p>",
     
-    "title_1" : "Zmieniłeś czynnik z R404A na <span class='font-semibold text-ref'>R448A</span>. Zmieniłeś czynnik z R404A na ",
-    "title_2" : "Zmieniłeś czynnik z R404A na <span class='font-semibold text-ref'>R449A</span>. Zmieniłeś czynnik z R404A na ",
-    "title_3" : "Zmieniłeś czynnik z R404A na <span class='font-semibold text-ref'>R450A</span>. Zmieniłeś czynnik z R404A na ",
-    "title_4" : "Zmieniłeś czynnik z R404A na <span class='font-semibold text-ref'>R452A</span>. Zmieniłeś czynnik z R404A na ",
-    "title_5" : "Zmieniłeś czynnik z R404A na <span class='font-semibold text-ref'>R513A</span>. Zmieniłeś czynnik z R404A na ",
-    "title_6" : "Zmieniłeś czynnik z R404A na <span class='font-semibold text-ref'>R449A</span>. Zmieniłeś czynnik z R404A na ",
-    "title_7" : "Zmieniłeś czynnik z R404A na <span class='font-semibold text-ref'>R452A</span>. Zmieniłeś czynnik z R404A na ",
+    "title_1" : "Zmieniłeś czynnik z R404A na <span class='font-semibold text-ref'>R448A</span>.",
+    "title_2" : "Zmieniłeś czynnik z R404A na <span class='font-semibold text-ref'>R449A</span>.",
+    "title_3" : "Zmieniłeś czynnik z R404A na <span class='font-semibold text-ref'>R450A</span>.",
+    "title_4" : "Zmieniłeś czynnik z R404A na <span class='font-semibold text-ref'>R452A</span>.",
+    "title_5" : "Zmieniłeś czynnik z R404A na <span class='font-semibold text-ref'>R513A</span>.",
+    "title_6" : "Zmieniłeś czynnik z R404A na <span class='font-semibold text-ref'>R449A</span>.",
+    "title_7" : "Zmieniłeś czynnik z R404A na <span class='font-semibold text-ref'>R452A</span>.",
 
-    "quiz1_q" : "1) Czy rurociąg CIECZOWY jest:",
+    "quiz1_q" : "1) Czy rurociąg cieczowy jest:",
     "quiz2_q" : "2) Czy  zawór elektromagnetyczny jest:",
     "quiz3_q" : "3) Czy wydajność zaworu rozprężnego jest:",
     "quiz4_q" : "4) Czy  parownik jest:",
@@ -30,11 +30,24 @@
     "ch_1"  : " Zbyt duży",
     "ch_2"  : " Zbyt mały"  ,
     "ch_3"  : " Musi być dostosowany",
-    "ch_4"  : "Potrzebna nowa dysza",
+    "ch_4"  : " Potrzebny jest nowy zawór",
+    
+
+    "_comment": "changed due to change in choices",
+
+    "ch_1a"  : " Zbyt duża",
+    "ch_2a"  : " Zbyt mała"  ,
+    "ch_3a"  : " Musi być dostosowana",
+    "ch_4a"  : " Potrzebny jest nowy zawór",
+
+    "ch_1b"  : " Zbyt duże",
+    "ch_2b"  : " Zbyt małe"  ,
+    "ch_3b"  : " Musi być dostosowane",
+    "ch_4b"  : " Potrzebny jest nowy zawór",
 
     "play" : "Zagraj",
 
-    "select_system": "Select the System",
+    "select_system": "Wybierz aplikację",
     "cold_room" : "Komora chodnicza 5°C/40°F",
     "freezer_room" : "Komora mroźnicza -18°C/0°F",
 
@@ -100,6 +113,18 @@
     
     "choose_lang" : "Wybierz swój język",
     "rules_title" : "Zasady i warunki konkursu",
+
+    "policy_link": "https://www.danfoss.com/en/terms/privacy/",
+    "facebook_link": "https://www.facebook.com/sharer/sharer.php?u=danfoss.com",
+    "tools_link": "http://refrigerantweek.danfoss.com",
+    "learning_link": "https://www.danfoss.com/en/service-and-support/learning/",
+    
+    "instagram_link": "https://www.instagram.com/DanfossCool",
+    "linkedin_link": "https://www.linkedin.com/showcase/DanfossCool",
+    "twitter_link": "https://www.twitter.com/DanfossCool",
+    "youtube_link": "https://www.youtube.com/DanfossCool",
+    "signup_thanks": " & Signing up for the competition",
+
     "rules" : [
         "<h2>General Terms and Conditions for participants </h2>",
         "<p>The <b>#RefrigerantCoolgame</b> takes place over the period 20th August 2019 at 13:30 CET (Central European Time) to 30th September 2019 at 23:59 CET. </p>",

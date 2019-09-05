@@ -1,8 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-
-
 import { InformationModuleModule } from '../information-module/information-module.module';
 
 
@@ -11,6 +8,7 @@ import { InformationModuleModule } from '../information-module/information-modul
 })
 export class GeneralService {
 
+  version = "1.0.0";
   mode = "desktop";
   //mode = "web";
 
@@ -390,12 +388,12 @@ export class GeneralService {
               score:0
             },
             {
-              text:"ch_1",
+              text:"ch_1a",
               correct:true,
               score:200
             },
             {
-              text:"ch_2",
+              text:"ch_2a",
               correct:false,
               score:0
             }
@@ -551,12 +549,12 @@ export class GeneralService {
               score:0
             },
             {
-              text:"ch_1",
+              text:"ch_1a",
               correct:true,
               score:200
             },
             {
-              text:"ch_2",
+              text:"ch_2a",
               correct:false,
               score:0
             }
@@ -593,12 +591,12 @@ export class GeneralService {
               score:0
             },
             {
-              text:"ch_1",
+              text:"ch_1b",
               correct:false,
               score:0
             },
             {
-              text:"ch_3",
+              text:"ch_3b",
               correct:true,
               score:200
             }
@@ -615,12 +613,12 @@ export class GeneralService {
               score:200
             },
             {
-              text:"ch_1",
+              text:"ch_1a",
               correct:false,
               score:0
             },
             {
-              text:"ch_2",
+              text:"ch_2a",
               correct:false,
               score:0
             }

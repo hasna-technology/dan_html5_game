@@ -32,6 +32,20 @@
     "ch_3"  : " Precisa ser ajustado(a).",
     "ch_4"  : " Um novo orifício é necessário",
 
+    "_comment": "changed for polish language",
+    
+    "ch_1a"  : " Grande demais",
+    "ch_2a"  : " Pequeno(a) demais"  ,
+    "ch_3a"  : " Precisa ser ajustado(a).",
+    "ch_4a"  : " Um novo orifício é necessário",
+
+    
+    "ch_1b"  : " Grande demais",
+    "ch_2b"  : " Pequeno(a) demais"  ,
+    "ch_3b"  : " Precisa ser ajustado(a).",
+    "ch_4b"  : " Um novo orifício é necessário",
+
+
     "play" : "Jogue!",
 
     "select_system": "Selecione o sistema",

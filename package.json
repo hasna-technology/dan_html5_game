@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod --base-href https://hasna-technology.github.io/danfoss_html5_game/",
+    "production": "ng build --prod --base-href http://coolgame.danfoss.com/Html5/",
+    "desktop": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",

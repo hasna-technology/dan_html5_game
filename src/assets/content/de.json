@@ -2,7 +2,7 @@
     "welcome" : "Willkommen bei",
     "game": "CoolGame III",
   "your_task": "Ihre Aufgabe",
-   "next" : "Nächster",
+   "next" : "weiter",
     "txt1" : "<b class='font-bold'>Ersetzen Sie R404A </b>in Ihrem System und ermitteln Sie die Konsequenzen.<br>Fordern Sie sich und Ihr Wissen heraus und erhalten Sie die Chance einen Preis zu gewinnen!",
     "instr": "Klicken Sie hier um den Haftungsausschluss und die Regeln zu lesen.",
     
@@ -11,15 +11,15 @@
     "txt6" : "3. Wählen Sie die Konsequenzen",
     "txt7" : "<p>Um die gleiche Funktion und Temperaturen beizubehalten, wie würden Sie das Setup und die Komponenten ändern?</p>",
     
-    "title_1" : "Sie haben von R404A auf umgestellt <span class='font-semibold text-ref'>R448A</span>. Wie wird das das System beeinflussen?",
-    "title_2" : "Sie haben von R404A auf umgestellt <span class='font-semibold text-ref'>R449A</span>. Wie wird das das System beeinflussen?",
-    "title_3" : "Sie haben von R404A auf umgestellt <span class='font-semibold text-ref'>R450A</span>. Wie wird das das System beeinflussen?",
-    "title_4" : "Sie haben von R404A auf umgestellt <span class='font-semibold text-ref'>R452A</span>. Wie wird das das System beeinflussen?",
-    "title_5" : "Sie haben von R404A auf umgestellt <span class='font-semibold text-ref'>R513A</span>. Wie wird das das System beeinflussen?",
-    "title_6" : "Sie haben von R404A auf umgestellt <span class='font-semibold text-ref'>R449A</span>. Wie wird das das System beeinflussen?",
-    "title_7" : "Sie haben von R404A auf umgestellt <span class='font-semibold text-ref'>R452A</span>. Wie wird das das System beeinflussen?",
+    "title_1" : "Sie haben von R404A auf <span class='font-semibold text-ref'>R448A</span> umgestellt. Wie wird das das System beeinflussen?",
+    "title_2" : "Sie haben von R404A auf <span class='font-semibold text-ref'>R449A</span> umgestellt. Wie wird das das System beeinflussen?",
+    "title_3" : "Sie haben von R404A auf <span class='font-semibold text-ref'>R450A</span> umgestellt. Wie wird das das System beeinflussen?",
+    "title_4" : "Sie haben von R404A auf <span class='font-semibold text-ref'>R452A</span> umgestellt. Wie wird das das System beeinflussen?",
+    "title_5" : "Sie haben von R404A auf <span class='font-semibold text-ref'>R513A</span> umgestellt. Wie wird das das System beeinflussen?",
+    "title_6" : "Sie haben von R404A auf <span class='font-semibold text-ref'>R449A</span> umgestellt. Wie wird das das System beeinflussen?",
+    "title_7" : "Sie haben von R404A auf <span class='font-semibold text-ref'>R452A</span> umgestellt. Wie wird das das System beeinflussen?",
 
-    "quiz1_q" : "1) Bzgl. der FLÜSSIGKEITS Leitung",
+    "quiz1_q" : "1) Bzgl. der Flüssigkeits-Leitung",
     "quiz2_q" : "2) Bzgl. des Magnetventils",
     "quiz3_q" : "3) Bzgl. der Expansionsventilleistung",
     "quiz4_q" : "4) Bzgl. des Verdampfers",
@@ -31,6 +31,19 @@
     "ch_2"  : " Zu klein"  ,
     "ch_3"  : " Muss angepasst werden",
     "ch_4"  : "Neue Düse benötigt",
+
+    "_comment": "changed for polish language",
+    
+    "ch_1a"  : " Zu groß",
+    "ch_2a"  : " Zu klein"  ,
+    "ch_3a"  : " Muss angepasst werden",
+    "ch_4a"  : "Neue Düse benötigt",
+
+    
+    "ch_1b"  : " Zu groß",
+    "ch_2b"  : " Zu klein"  ,
+    "ch_3b"  : " Muss angepasst werden",
+    "ch_4b"  : "Neue Düse benötigt",
 
     "play" : "ABSPIELEN",
 
@@ -55,7 +68,7 @@
     "freezer_room_score":"Tiefkühlraum Ergebnis",
     "total"     :"Gesamt",
     "total_all" :"Insgesamt ",
-    "out"       :"aus",
+    "out"       :"von",
     "wishes"    :"Klasse! Möchten Sie nochmal spielen?",
     "play_again":"Noch einmal spielen",
    
@@ -100,6 +113,17 @@
     
     "choose_lang" : "Wählen Sie Ihre Sprache",
     "rules_title" : "Wettbewerbsregeln und- bedingungen",
+
+    "policy_link": "https://www.danfoss.com/de-de/terms/privacy/",
+    "facebook_link": "https://www.facebook.com/sharer/sharer.php?u=danfoss.com",
+    "tools_link": "https://www.danfoss.com/de-de/about-danfoss/our-businesses/cooling/refrigerants-and-energy-efficiency/danfoss-refrigerant-transition-center/",
+    "learning_link": "https://www.danfoss.com/de-de/service-and-support/learning/",
+    
+    "instagram_link": "https://www.instagram.com/DanfossCool",
+    "linkedin_link": "https://www.linkedin.com/showcase/DanfossCool",
+    "twitter_link": "https://www.twitter.com/DanfossCool",
+    "youtube_link": "https://www.youtube.com/DanfossCool",
+    "signup_thanks": " & Signing up for the competition",
    
   "rules" : [
       "<h2>General Terms and Conditions for participants </h2>",

@@ -25,7 +25,8 @@ table.c-table {
 
 .next_panel {
   padding: 2rem;
-  justify-content: space-evenly;
+  /*justify-content: space-evenly;*/
+  justify-content: space-around;
 }
 
 .small_text {
@@ -188,4 +189,11 @@ table {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.share{
+  max-width: 250px;
+  margin: 0 auto;
+}
+.flex-1{
+  flex: 1;
 }

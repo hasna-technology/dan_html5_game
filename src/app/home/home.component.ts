@@ -30,6 +30,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     console.log("Mode = " + this.service.mode);
+    console.log("version = " + this.service.version);
     let lang = localStorage.getItem('lang');
     if(lang != undefined)
     {
