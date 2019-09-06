@@ -26,11 +26,38 @@
     "quiz5_q" : "5) Was ist mit der Überhitzung?",
     "quiz6_q" : "6) Bzgl. des Verdichters",
     "quiz7_q" : "7)Bzgl. des Verflüssigers", 
-    "ch_0"  : " Okay",
-    "ch_1"  : " Zu groß",
-    "ch_2"  : " Zu klein"  ,
-    "ch_3"  : " Muss angepasst werden",
-    "ch_4"  : "Neue Düse benötigt",
+
+    "ch_1_0"  : " Okay",
+    "ch_1_1"  : " Zu groß",
+    "ch_1_2"  : " Zu klein"  ,
+
+    "ch_2_0"  : " Okay",
+    "ch_2_1"  : " Zu groß",
+    "ch_2_2"  : " Zu klein"  ,
+
+    "ch_3_0"  : " Okay",
+    "ch_3_1"  : " Zu groß",
+    "ch_3_2"  : " Zu klein"  ,
+
+    "ch_4_0"  : " Okay",
+    "ch_4_1"  : " Zu groß",
+    "ch_4_2"  : " Zu klein"  ,
+
+
+    "ch_5_0"  : " Okay",
+    "ch_5_1"  : " Zu groß",
+    "ch_5_2"  : " Zu klein"  ,
+    "ch_5_3"  : " Muss angepasst werden",
+    "ch_5_4"  : " Neue Düse benötigt",
+
+    "ch_6_0"  : " Okay",
+    "ch_6_1"  : " Zu groß",
+    "ch_6_2"  : " Zu klein"  ,
+
+    "ch_7_0"  : " Okay",
+    "ch_7_1"  : " Zu groß",
+    "ch_7_2"  : " Zu klein"  ,
+
 
     "play" : "ABSPIELEN",
 
