@@ -26,24 +26,37 @@
   "quiz5_q" : "5) Et la surchauffe est-elle",
   "quiz6_q" : "6) Le compresseur est-il",
   "quiz7_q" : "7) Le condenseur est-il", 
-  "ch_0"  : " OK",
-  "ch_1"  : "Trop grand(e)",
-  "ch_2"  : "Trop petit(e)",
-  "ch_3"  : "Doit être ajusté(e)",
-  "ch_4"  : "Nouvel orifice requis",
 
-  "_comment": "changed for polish language",
-    
-  "ch_1a"  : "Trop grand(e)",
-  "ch_2a"  : "Trop petit(e)",
-  "ch_3a"  : "Doit être ajusté(e)",
-  "ch_4a"  : "Nouvel orifice requis",
+  "ch_1_0"  : " OK",
+  "ch_1_1"  : "Trop grand(e)",
+  "ch_1_2"  : "Trop petit(e)",
 
+  "ch_2_0"  : " OK",
+  "ch_2_1"  : "Trop grand(e)",
+  "ch_2_2"  : "Trop petit(e)",
+
+  "ch_3_0"  : " OK",
+  "ch_3_1"  : "Trop grand(e)",
+  "ch_3_2"  : "Trop petit(e)",
+
+  "ch_4_0"  : " OK",
+  "ch_4_1"  : "Trop grand(e)",
+  "ch_4_2"  : "Trop petit(e)",
+
+  "ch_5_0"  : " OK",
+  "ch_5_1"  : "Trop grand(e)",
+  "ch_5_2"  : "Trop petit(e)",
+  "ch_5_3"  : "Doit être ajusté(e)",
+  "ch_5_4"  : "Nouvel orifice requis",
+
+  "ch_6_0"  : " OK",
+  "ch_6_1"  : "Trop grand(e)",
+  "ch_6_2"  : "Trop petit(e)",
+
+  "ch_7_0"  : " OK",
+  "ch_7_1"  : "Trop grand(e)",
+  "ch_7_2"  : "Trop petit(e)",
   
-  "ch_1b"  : "Trop grand(e)",
-  "ch_2b"  : "Trop petit(e)",
-  "ch_3b"  : "Doit être ajusté(e)",
-  "ch_4b"  : "Nouvel orifice requis",
 
   "play" : "JOUER",
 

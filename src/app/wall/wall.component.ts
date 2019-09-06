@@ -15,7 +15,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class WallComponent implements OnInit {
   
   //host = "https://localhost:44327/api/";
-  host = "http://coolgame.danfoss.com/api/";
+  host = "https://coolgame.danfoss.com/api/";
 
   angForm;
   score = 0;

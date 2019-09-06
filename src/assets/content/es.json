@@ -26,25 +26,38 @@
   "quiz5_q" : "5) ¿Qué pasa con el recalentamiento?",
   "quiz6_q" : "6) Es el compresor",
   "quiz7_q" : "7) Es el condensador", 
-  "ch_0"  : " OK",
-  "ch_1"  : " Demasiado grande",
-  "ch_2"  : " Demasiado pequeño/a"  ,
-  "ch_3"  : " Debe ajustarse",
-  "ch_4"  : " Se necesita un nuevo orificio",
 
-  "_comment": "changed for polish language",
-    
-    "ch_1a"  : " Demasiado grande",
-    "ch_2a"  : " Demasiado pequeño/a"  ,
-    "ch_3a"  : " Debe ajustarse",
-    "ch_4a"  : " Se necesita un nuevo orificio",
-      
-    "ch_1b"  : " Demasiado grande",
-    "ch_2b"  : " Demasiado pequeño/a"  ,
-    "ch_3b"  : " Debe ajustarse",
-    "ch_4b"  : " Se necesita un nuevo orificio",
+  "ch_1_0"  : " OK",
+  "ch_1_1"  : " Demasiado grande",
+  "ch_1_2"  : " Demasiado pequeño/a"  ,
 
-  "play" : "JUGAR",
+  "ch_2_0"  : " OK",
+  "ch_2_1"  : " Demasiado grande",
+  "ch_2_2"  : " Demasiado pequeño/a"  ,
+
+  "ch_3_0"  : " OK",
+  "ch_3_1"  : " Demasiado grande",
+  "ch_3_2"  : " Demasiado pequeño/a"  ,
+
+  "ch_4_0"  : " OK",
+  "ch_4_1"  : " Demasiado grande",
+  "ch_4_2"  : " Demasiado pequeño/a"  ,
+
+  "ch_5_0"  : " OK",
+  "ch_5_1"  : " Demasiado grande",
+  "ch_5_2"  : " Demasiado pequeño/a"  ,
+  "ch_5_3"  : " Debe ajustarse",
+  "ch_5_4"  : " Se necesita un nuevo orificio",
+
+  "ch_6_0"  : " OK",
+  "ch_6_1"  : " Demasiado grande",
+  "ch_6_2"  : " Demasiado pequeño/a"  ,
+
+  "ch_7_0"  : " OK",
+  "ch_7_1"  : " Demasiado grande",
+  "ch_7_2"  : " Demasiado pequeño/a"  ,
+
+   "play" : "JUGAR",
 
   "select_system": "Seleccione el sistema",
   "cold_room" : "Cámara frigorífica 5°C/40°F",

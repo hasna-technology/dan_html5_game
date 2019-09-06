@@ -16,8 +16,6 @@ import { Validators, FormBuilder } from '@angular/forms';
 })
 export class AssessmentComponent implements OnInit {
 
-
-
   constructor(private fb: FormBuilder, private router: Router, private route: ActivatedRoute, public service: GeneralService, private changeDector: ChangeDetectorRef) { }
 
   id;
@@ -164,6 +162,7 @@ export class AssessmentComponent implements OnInit {
   }
   getContent(id) {
     //console.log(id);
+    //return id;
     return this.service._content[id];
   }
   noThanks() {

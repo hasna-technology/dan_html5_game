@@ -8,9 +8,12 @@ import { InformationModuleModule } from '../information-module/information-modul
 })
 export class GeneralService {
 
-  version = "1.0.0";
-  mode = "desktop";
-  //mode = "web";
+  //1.0.1
+  //Change in polish & ukrainian language
+  
+  version = "1.0.1";
+  //mode = "desktop";
+  mode = "web";
 
   _content = {};
   totalScore: any;
@@ -18,13 +21,13 @@ export class GeneralService {
     username: "",
     country: "",
   }
-  //baseUrl = window.location.origin;
-  baseUrl = "https://hasna-technology.github.io/danfoss_html5_game/";
+  baseUrl = window.location.origin;
+
   constructor(private http:HttpClient) { 
     let lang = localStorage.getItem('lang') == undefined ? 'en' : localStorage.getItem('lang');
     this.getJson(lang);
     //console.log(window.location)
-  }
+  } 
 
   getJson(lang){
     let _jsonURL = 'assets/content/' + lang +'.json';
@@ -341,17 +344,17 @@ export class GeneralService {
           question:"quiz1_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_1_0",
               correct:false,
               score:0
             },
             {
-              text:"ch_1",
+              text:"ch_1_1",
               correct:true,
               score:200
             },
             {
-              text:"ch_2",
+              text:"ch_1_2",
               correct:false,
               score:0
             }
@@ -362,17 +365,17 @@ export class GeneralService {
           question:"quiz2_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_2_0",
               correct:false,
               score:0
             },
             {
-              text:"ch_1",
+              text:"ch_2_1",
               correct:true,
               score:200
             },
             {
-              text:"ch_2",
+              text:"ch_2_2",
               correct:false,
               score:0
             }
@@ -383,17 +386,17 @@ export class GeneralService {
           question:"quiz3_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_3_0",
               correct:false,
               score:0
             },
             {
-              text:"ch_1a",
+              text:"ch_3_1",
               correct:true,
               score:200
             },
             {
-              text:"ch_2a",
+              text:"ch_3_2",
               correct:false,
               score:0
             }
@@ -404,17 +407,17 @@ export class GeneralService {
           question:"quiz4_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_4_0",
               correct:true,
               score:200
             },
             {
-              text:"ch_1",
+              text:"ch_4_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_2",
+              text:"ch_4_2",
               correct:false,
               score:0
             }
@@ -425,17 +428,17 @@ export class GeneralService {
           question:"quiz5_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_5_0",
               correct:false,
               score:0
             },
             {
-              text:"ch_1",
+              text:"ch_5_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_3",
+              text:"ch_5_3",
               correct:true,
               score:200
             }
@@ -447,17 +450,17 @@ export class GeneralService {
           question:"quiz6_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_6_0",
               correct:true,
               score:200
             },
             {
-              text:"ch_1",
+              text:"ch_6_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_2",
+              text:"ch_6_2",
               correct:false,
               score:0
             }
@@ -470,17 +473,17 @@ export class GeneralService {
           question:"quiz7_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_7_0",
               correct:true,
               score:200
             },
             {
-              text:"ch_1",
+              text:"ch_7_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_2",
+              text:"ch_7_2",
               correct:false,
               score:0
             }
@@ -502,17 +505,17 @@ export class GeneralService {
           question:"quiz1_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_1_0",
               correct:false,
               score:0
             },
             {
-              text:"ch_1",
+              text:"ch_1_1",
               correct:true,
               score:200
             },
             {
-              text:"ch_2",
+              text:"ch_1_2",
               correct:false,
               score:0
             }
@@ -523,17 +526,17 @@ export class GeneralService {
           question:"quiz2_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_2_0",
               correct:false,
               score:0
             },
             {
-              text:"ch_1",
+              text:"ch_2_1",
               correct:true,
               score:200
             },
             {
-              text:"ch_2",
+              text:"ch_2_2",
               correct:false,
               score:0
             }
@@ -544,17 +547,17 @@ export class GeneralService {
           question:"quiz3_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_3_0",
               correct:false,
               score:0
             },
             {
-              text:"ch_1a",
+              text:"ch_3_1",
               correct:true,
               score:200
             },
             {
-              text:"ch_2a",
+              text:"ch_3_2",
               correct:false,
               score:0
             }
@@ -565,17 +568,17 @@ export class GeneralService {
           question:"quiz4_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_4_0",
               correct:true,
               score:200
             },
             {
-              text:"ch_1",
+              text:"ch_4_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_2",
+              text:"ch_4_2",
               correct:false,
               score:0
             }
@@ -586,17 +589,17 @@ export class GeneralService {
           question:"quiz5_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_5_0",
               correct:false,
               score:0
             },
             {
-              text:"ch_1b",
+              text:"ch_5_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_3b",
+              text:"ch_5_3",
               correct:true,
               score:200
             }
@@ -608,17 +611,17 @@ export class GeneralService {
           question:"quiz6_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_6_0",
               correct:true,
               score:200
             },
             {
-              text:"ch_1a",
+              text:"ch_6_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_2a",
+              text:"ch_6_2",
               correct:false,
               score:0
             }
@@ -631,17 +634,17 @@ export class GeneralService {
           question:"quiz7_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_7_0",
               correct:true,
               score:200
             },
             {
-              text:"ch_1",
+              text:"ch_7_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_2",
+              text:"ch_7_2",
               correct:false,
               score:0
             }
@@ -663,17 +666,17 @@ export class GeneralService {
           question:"quiz1_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_1_0",
               correct:false,
               score:0
             },
             {
-              text:"ch_1",
+              text:"ch_1_1",
               correct:true,
               score:200
             },
             {
-              text:"ch_2",
+              text:"ch_1_2",
               correct:false,
               score:0
             }
@@ -684,17 +687,17 @@ export class GeneralService {
           question:"quiz2_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_2_0",
               correct:true,
               score:200
             },
             {
-              text:"ch_1",
+              text:"ch_2_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_2",
+              text:"ch_2_2",
               correct:false,
               score:0
             }
@@ -705,17 +708,17 @@ export class GeneralService {
           question:"quiz3_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_3_0",
               correct:false,
               score:0
             },
             {
-              text:"ch_1",
+              text:"ch_3_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_2",
+              text:"ch_3_2",
               correct:true,
               score:200
             }
@@ -726,17 +729,17 @@ export class GeneralService {
           question:"quiz4_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_4_0",
               correct:true,
               score:200
             },
             {
-              text:"ch_1",
+              text:"ch_4_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_2",
+              text:"ch_4_2",
               correct:false,
               score:0
             }
@@ -747,17 +750,17 @@ export class GeneralService {
           question:"quiz5_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_5_0",
               correct:false,
               score:0
             },
             {
-              text:"ch_1",
+              text:"ch_5_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_4",
+              text:"ch_5_4",
               correct:true,
               score:200
             }
@@ -769,17 +772,17 @@ export class GeneralService {
           question:"quiz6_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_6_0",
               correct:false,
               score:0
             },
             {
-              text:"ch_1",
+              text:"ch_6_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_2",
+              text:"ch_6_2",
               correct:true,
               score:200
             }
@@ -792,17 +795,17 @@ export class GeneralService {
           question:"quiz7_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_7_0",
               correct:true,
               score:200
             },
             {
-              text:"ch_1",
+              text:"ch_7_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_2",
+              text:"ch_7_2",
               correct:false,
               score:0
             }
@@ -824,17 +827,17 @@ export class GeneralService {
           question:"quiz1_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_1_0",
               correct:false,
               score:0
             },
             {
-              text:"ch_1",
+              text:"ch_1_1",
               correct:true,
               score:200
             },
             {
-              text:"ch_2",
+              text:"ch_1_2",
               correct:false,
               score:0
             }
@@ -845,17 +848,17 @@ export class GeneralService {
           question:"quiz2_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_2_0",
               correct:true,
               score:200
             },
             {
-              text:"ch_1",
+              text:"ch_2_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_2",
+              text:"ch_2_2",
               correct:false,
               score:0
             }
@@ -866,17 +869,17 @@ export class GeneralService {
           question:"quiz3_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_3_0",
               correct:true,
               score:200
             },
             {
-              text:"ch_1",
+              text:"ch_3_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_2",
+              text:"ch_3_2",
               correct:false,
               score:0
             }
@@ -887,17 +890,17 @@ export class GeneralService {
           question:"quiz4_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_4_0",
               correct:true,
               score:200
             },
             {
-              text:"ch_1",
+              text:"ch_4_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_2",
+              text:"ch_4_2",
               correct:false,
               score:0
             }
@@ -908,17 +911,17 @@ export class GeneralService {
           question:"quiz5_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_5_0",
               correct:false,
               score:0
             },
             {
-              text:"ch_1",
+              text:"ch_5_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_4",
+              text:"ch_5_4",
               correct:true,
               score:200
             }
@@ -930,17 +933,17 @@ export class GeneralService {
           question:"quiz6_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_6_0",
               correct:false,
               score:0
             },
             {
-              text:"ch_1",
+              text:"ch_6_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_2",
+              text:"ch_6_2",
               correct:true,
               score:200
             }
@@ -952,17 +955,17 @@ export class GeneralService {
           question:"quiz7_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_7_0",
               correct:true,
               score:200
             },
             {
-              text:"ch_1",
+              text:"ch_7_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_2",
+              text:"ch_7_2",
               correct:false,
               score:0
             }
@@ -987,17 +990,17 @@ export class GeneralService {
           question:"quiz1_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_1_0",
               correct:false,
               score:0
             },
             {
-              text:"ch_1",
+              text:"ch_1_1",
               correct:true,
               score:200
             },
             {
-              text:"ch_2",
+              text:"ch_1_2",
               correct:false,
               score:0
             }
@@ -1008,17 +1011,17 @@ export class GeneralService {
           question:"quiz2_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_2_0",
               correct:false,
               score:0
             },
             {
-              text:"ch_1",
+              text:"ch_2_1",
               correct:true,
               score:200
             },
             {
-              text:"ch_2",
+              text:"ch_2_2",
               correct:false,
               score:0
             }
@@ -1029,17 +1032,17 @@ export class GeneralService {
           question:"quiz3_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_3_0",
               correct:false,
               score:0
             },
             {
-              text:"ch_1",
+              text:"ch_3_1",
               correct:true,
               score:200
             },
             {
-              text:"ch_2",
+              text:"ch_3_2",
               correct:false,
               score:0
             }
@@ -1050,17 +1053,17 @@ export class GeneralService {
           question:"quiz4_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_4_0",
               correct:true,
               score:200
             },
             {
-              text:"ch_1",
+              text:"ch_4_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_2",
+              text:"ch_4_2",
               correct:false,
               score:0
             }
@@ -1071,17 +1074,17 @@ export class GeneralService {
           question:"quiz5_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_5_0",
               correct:false,
               score:0
             },
             {
-              text:"ch_1",
+              text:"ch_5_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_4",
+              text:"ch_5_4",
               correct:true,
               score:200
             }
@@ -1093,17 +1096,17 @@ export class GeneralService {
           question:"quiz6_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_6_0",
               correct:true,
               score:200
             },
             {
-              text:"ch_1",
+              text:"ch_6_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_2",
+              text:"ch_6_2",
               correct:false,
               score:0
             }
@@ -1115,17 +1118,17 @@ export class GeneralService {
           question:"quiz7_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_7_0",
               correct:true,
               score:200
             },
             {
-              text:"ch_1",
+              text:"ch_7_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_2",
+              text:"ch_7_2",
               correct:false,
               score:0
             }
@@ -1146,17 +1149,17 @@ export class GeneralService {
           question:"quiz1_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_1_0",
               correct:true,
               score:200
             },
             {
-              text:"ch_1",
+              text:"ch_1_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_2",
+              text:"ch_1_2",
               correct:false,
               score:0
             }
@@ -1167,17 +1170,17 @@ export class GeneralService {
           question:"quiz2_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_2_0",
               correct:true,
               score:200
             },
             {
-              text:"ch_1",
+              text:"ch_2_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_2",
+              text:"ch_2_2",
               correct:false,
               score:0
             }
@@ -1188,17 +1191,17 @@ export class GeneralService {
           question:"quiz3_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_3_0",
               correct:true,
               score:200
             },
             {
-              text:"ch_1",
+              text:"ch_3_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_2",
+              text:"ch_3_2",
               correct:false,
               score:0
             }
@@ -1209,17 +1212,17 @@ export class GeneralService {
           question:"quiz4_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_4_0",
               correct:true,
               score:200
             },
             {
-              text:"ch_1",
+              text:"ch_4_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_2",
+              text:"ch_4_2",
               correct:false,
               score:0
             }
@@ -1231,17 +1234,17 @@ export class GeneralService {
           question:"quiz5_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_5_0",
               correct:false,
               score:0
             },
             {
-              text:"ch_1",
+              text:"ch_5_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_3",
+              text:"ch_5_3",
               correct:true,
               score:200
             }
@@ -1253,17 +1256,17 @@ export class GeneralService {
           question:"quiz6_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_6_0",
               correct:true,
               score:200
             },
             {
-              text:"ch_1",
+              text:"ch_6_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_2",
+              text:"ch_6_2",
               correct:false,
               score:0
             }
@@ -1275,17 +1278,17 @@ export class GeneralService {
           question:"quiz7_q",
           choices:[
             {
-              text:"ch_0",
+              text:"ch_7_0",
               correct:true,
               score:200
             },
             {
-              text:"ch_1",
+              text:"ch_7_1",
               correct:false,
               score:0
             },
             {
-              text:"ch_2",
+              text:"ch_7_2",
               correct:false,
               score:0
             }

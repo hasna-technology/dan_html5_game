@@ -26,5 +26,15 @@ export class InformationComponent implements OnInit {
       }*/
      });
     //this.data = this.general._content;
+    for(var i=0;i<this.general.lbp_ref.length;i++){
+      var quiz = this.general.lbp_ref[i].quiz;
+      for(var j=0;j<quiz.length;j++){
+        var choices = quiz[j].choices;
+        for(var k=0;k<choices.length;k++){
+          //choices[k].text = "ch_"+i+"_"+j+"_"+k;
+        }
+      }
+    }
+    console.log(this.general.lbp_ref);
   }
 }

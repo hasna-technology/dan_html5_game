@@ -27,26 +27,36 @@
     "quiz6_q" : "6) Is the compressor",
     "quiz7_q" : "7) Is the condenser", 
 
-    "ch_0"  : " OK",
-    "ch_1"  : " Too big",
-    "ch_2"  : " Too small"  ,
-    "ch_3"  : " Must be adjusted",
-    "ch_4"  : " New orifice needed",
-
-    "_comment": "changed for polish language",
     
-    "ch_1a"  : " Too big",
-    "ch_2a"  : " Too small"  ,
-    "ch_3a"  : " Must be adjusted",
-    "ch_4a"  : " New orifice needed",
-
+    "ch_1_0"  : " OK",
+    "ch_1_1"  : " Too big",
+    "ch_1_2"  : " Too small"  ,
     
-    "ch_1b"  : " Too big",
-    "ch_2b"  : " Too small"  ,
-    "ch_3b"  : " Must be adjusted",
-    "ch_4b"  : " New orifice needed",
-
-
+    "ch_2_0"  : " OK",
+    "ch_2_1"  : " Too big",
+    "ch_2_2"  : " Too small"  ,
+    
+    "ch_3_0"  : " OK",
+    "ch_3_1"  : " Too big",
+    "ch_3_2"  : " Too small"  ,
+    
+    "ch_4_0"  : " OK",
+    "ch_4_1"  : " Too big",
+    "ch_4_2"  : " Too small"  ,
+    
+    "ch_5_0"  : " OK",
+    "ch_5_1"  : " Too big",
+    "ch_5_2"  : " Too small"  ,
+    "ch_5_3"  : " Must be adjusted",
+    "ch_5_4"  : " New orifice needed",
+    
+    "ch_6_0"  : " OK",
+    "ch_6_1"  : " Too big",
+    "ch_6_2"  : " Too small"  ,
+    
+    "ch_7_0"  : " OK",
+    "ch_7_1"  : " Too big",
+    "ch_7_2"  : " Too small"  ,
 
     "play" : "PLAY",
 

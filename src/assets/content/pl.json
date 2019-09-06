@@ -26,11 +26,38 @@
     "quiz5_q" : "5) Co z przegrzaniem?",
     "quiz6_q" : "6) Czy sprężarka jest:",
     "quiz7_q" : "7) Czy skraplacz jest:", 
-    "ch_0"  : " OK",
-    "ch_1"  : " Zbyt duży",
-    "ch_2"  : " Zbyt mały"  ,
-    "ch_3"  : " Musi być dostosowany",
-    "ch_4"  : " Potrzebny jest nowy zawór",
+    
+    "ch_1_0"  : " OK",
+    "ch_1_1"  : " Zbyt duży",
+    "ch_1_2"  : " Zbyt mały"  ,
+
+    "ch_2_0"  : " OK",
+    "ch_2_1"  : " Zbyt duży",
+    "ch_2_2"  : " Zbyt mały"  ,
+
+    "ch_3_0"  : " OK",
+    "ch_3_1"  : " Zbyt duża",
+    "ch_3_2"  : " Zbyt mała"  ,
+
+    "ch_4_0"  : " OK",
+    "ch_4_1"  : " Zbyt duży",
+    "ch_4_2"  : " Zbyt mały"  ,
+
+    "ch_5_0"  : " OK",
+    "ch_5_1"  : " Zbyt duży",
+    "ch_5_2"  : " Zbyt mały"  ,
+    "ch_5_3"  : " Musi być dostosowane",
+    "ch_5_4"  : " Potrzebny jest nowy zawór",
+
+    "ch_6_0"  : " OK",
+    "ch_6_1"  : " Zbyt duża",
+    "ch_6_2"  : " Zbyt mała"  ,
+
+    "ch_7_0"  : " OK",
+    "ch_7_1"  : " Zbyt duży",
+    "ch_7_2"  : " Zbyt mały"  ,
+
+
     
 
     "_comment": "changed due to change in choices",

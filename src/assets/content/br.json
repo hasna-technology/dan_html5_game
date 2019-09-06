@@ -26,25 +26,36 @@
     "quiz5_q" : "5) E o superaquecimento?",
     "quiz6_q" : "6) O compressor é",
     "quiz7_q" : "7) O condensador é", 
-    "ch_0"  : " OK",
-    "ch_1"  : " Grande demais",
-    "ch_2"  : " Pequeno(a) demais"  ,
-    "ch_3"  : " Precisa ser ajustado(a).",
-    "ch_4"  : " Um novo orifício é necessário",
 
-    "_comment": "changed for polish language",
+    "ch_1_0"  : " OK",
+    "ch_1_1"  : " Grande demais",
+    "ch_1_2"  : " Pequeno(a) demais"  ,
+
+    "ch_2_0"  : " OK",
+    "ch_2_1"  : " Grande demais",
+    "ch_2_2"  : " Pequeno(a) demais"  ,
+
+    "ch_3_0"  : " OK",
+    "ch_3_1"  : " Grande demais",
+    "ch_3_2"  : " Pequeno(a) demais"  ,
+
+    "ch_4_0"  : " OK",
+    "ch_4_1"  : " Grande demais",
+    "ch_4_2"  : " Pequeno(a) demais"  ,
     
-    "ch_1a"  : " Grande demais",
-    "ch_2a"  : " Pequeno(a) demais"  ,
-    "ch_3a"  : " Precisa ser ajustado(a).",
-    "ch_4a"  : " Um novo orifício é necessário",
+    "ch_5_0"  : " OK",
+    "ch_5_1"  : " Grande demais",
+    "ch_5_2"  : " Pequeno(a) demais"  ,
+    "ch_5_3"  : " Precisa ser ajustado(a).",
+    "ch_5_4"  : " Um novo orifício é necessário",
 
-    
-    "ch_1b"  : " Grande demais",
-    "ch_2b"  : " Pequeno(a) demais"  ,
-    "ch_3b"  : " Precisa ser ajustado(a).",
-    "ch_4b"  : " Um novo orifício é necessário",
+    "ch_6_0"  : " OK",
+    "ch_6_1"  : " Grande demais",
+    "ch_6_2"  : " Pequeno(a) demais"  ,
 
+    "ch_7_0"  : " OK",
+    "ch_7_1"  : " Grande demais",
+    "ch_7_2"  : " Pequeno(a) demais"  ,
 
     "play" : "Jogue!",
 
